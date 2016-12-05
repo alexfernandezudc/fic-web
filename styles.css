@@ -104,7 +104,6 @@ a.content-menu-button:hover, a.content-menu-button:active {
 .tabla_standard {
     width: 100%;
     background-color: #FFF;
-    display: block; 
     border-collapse: collapse;
     border: 1px solid #CCC;
     font-family: 'Roboto Condensed', sans-serif;
