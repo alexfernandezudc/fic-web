@@ -34,7 +34,6 @@ a.pest:hover, a.pest:active {
 .content-title {
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 4px;
     width: 100%;
     background-color: #08436b;
     font-size: 15px;
@@ -102,8 +101,40 @@ a.content-menu-button:hover, a.content-menu-button:active {
 }
 
 /* ------------------------------ CONTENT ---------------------------------- */
-.content {
-    border: 3px dashed red;
-    margin-top: 1%;
+.tabla_standard {
     width: 100%;
-} 
+    background-color: #FFF;
+    display: block; 
+    border-collapse: collapse;
+    border: 1px solid #CCC;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+tr {
+    width:100%;
+}
+
+.tabla_standard thead th {
+    background-color: #d6d6d6;
+    border-right: 1px solid #e8e8e8;
+    font-size: 13px;
+    text-align: center;
+    font-family: 'Lato', sans-serif; 
+    color: #000;
+    font-weight: 500;
+    border-top: 2px solid #FFF;
+    width: 100%;
+}
+
+.tabla_standard tbody td {
+    font-size: 13px;
+    color: #000;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif; 
+    color: #333;
+    border-bottom: 1px solid #DDD;
+}
+
+tbody {
+    width: 100%;
+}
