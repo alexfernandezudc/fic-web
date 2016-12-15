@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="agenda-style.css">
+</head>
+<body>
+
+<img src="header_fgp_hp.jpg" alt="Imagen cabecera" width="100%" height="100%">
+<ul class="topnav" id="menu">
+  <li><a class="selected" href="index.html">AGENDA FGPATINAXE</a></li>
+  <li><a class="pest" href="http://www.hockeypatines.fgpatinaxe.gal/">HOCKEY PATINES</a></li>
+  <li><a class="pest" href="http://www.hockeypatines.fgpatinaxe.gal/">HOCKEY LINEA</a></li>
+  <li class="icon"><a href="javascript:void(0);" style="font-size:18px;" onclick="myFunction()">☰</a></li>
+</ul>
+
+<select style="margin-top: 10px">
+  <option value="filtro-m">Filtro modalidad...</option>
+  <option value="hp">HOCKEY PATINES</option>
+  <option value="hl">HOCKEY LINEA</option>
+</select>
+
+<select style="margin-top: 10px">
+  <option value="filtro-c">Filtro club...</option>
+  <option value="e1">H.C. LICEO</option>
+  <option value="e2">H.C. BORBOLLA</option>
+  <option value="e3">STA. MARIA DEL MAR</option>
+</select>
+
+<select style="margin-top: 10px">
+  <option value="7d">Próximos 7 días</option>
+  <option value="15d">Próximos 15 días</option>
+  <option value="21d">Próximos 21 días</option>
+</select>
+
+<table class="rwd_auto fontsize">
+        <thead>
+        <tr>
+            <th class="descarto2">Modalidad / Competición</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Local</th>
+            <th>Visitante</th>
+            <th class="descarto">Pista</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="descarto2">HP COPA FEDERACION FEMENINA</td>
+            <td>18/12/2016</td>
+            <td>13:30</td>
+            <td>H.C. LICEO</td>
+            <td>H.C. BORBOLLA</td>
+            <td class="descarto">COLEGIO LICEO</td>
+        </tr>
+        <tr>
+            <td class="descarto2">LIGA INFANTIL 1ª DIVISIÓN AUTONÓMICA</td>
+            <td>18/12/2016</td>
+            <td>16:30</td>
+            <td>A.C. ORDENES</td>
+            <td>STA. MARIA DEL MAR</td>
+            <td class="descarto">PAB. CASTELAO 1 - ORDES</td>
+        </tr>
+        <tr>
+            <td class="descarto2">LIGA JUVENIL AUTONÓMICA</td>
+            <td>18/12/2016</td>
+            <td>17:30</td>
+            <td>A.C. ORDENES</td>
+            <td>ESCOLA LUBIANS</td>
+            <td class="descarto">PAB. CASTELAO 1 - ORDES</td>
+        </tr>
+        </tbody>
+</table>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("menu");
+    if (x.className === "topnav") {
+        x.className += " t0";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+</body>
+</html>
