@@ -161,7 +161,7 @@ ul.topnav li.icon {
     /* Smartphones (portrait and landscape) ----------- */
     @media only screen and (min-device-width : 320px) and (max-device-width : 480px) 
     {
-        body { width: 320px; }
+        /*body { width: 320px; }*/
         .descarto {display:none;}
         .descarto2 {display:none;}
     }
@@ -169,7 +169,7 @@ ul.topnav li.icon {
     /* iPads (portrait and landscape) ----------- */
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) 
     {
-        body { width: 495px; }
+        /*body { width: 495px; }*/
         .descarto {display:none;}
         .fontsize {font-size:10px}
     }
