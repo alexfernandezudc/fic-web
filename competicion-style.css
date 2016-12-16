@@ -1,0 +1,194 @@
+body {
+  margin:0;
+}
+
+/* ----------------------------- TOPNAV ----------------------------- */
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #08436b;
+}
+
+ul.topnav li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: left;
+  height: 24px;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+ul.topnav li a.pest:hover, .selected:hover {
+  background-color: #1c76b0;
+}
+
+ul.topnav li.icon {
+  display: none;
+}
+
+.selected {
+	background-color: #1c76b0;
+}
+
+
+@media screen and (max-width:1024px) {
+
+  ul.topnav li:not(:first-child) {
+    display: none;
+    border-right: 0px;
+  }
+
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:1024px) {
+
+  ul.topnav.t0 {
+    position: relative;
+  }
+
+  ul.topnav.t0 li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  ul.topnav.t0 li {
+    float: none;
+    display: inline;
+    border-right: none;
+  }
+
+  ul.topnav.t0 li a {
+    display: block;
+    text-align: left;
+    font-size: 16px
+  }
+
+  .selected {
+	background-color: #08436b;
+  }
+
+}
+
+/*--------------------------------- FOOTER -------------------------------------*/
+
+.footer-distributed{
+  background-color: #08436b;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 5px 25px;
+  margin-top: 40px;
+}
+
+.footer-distributed .footer-left p{
+  color:  #8f9296;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Footer links */
+
+.footer-distributed p.footer-links{
+  font-size:15px;
+  font-weight: bold;
+  color:  #ffffff;
+  margin: 0 0 5px;
+  padding: 0;
+}
+
+.footer-distributed p.footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-right{
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color:  #045382;
+  border-radius: 2px;
+
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-left: 3px;
+}
+
+
+
+
+
+
+
+
+
+.content-menu {
+    overflow: auto;
+    width: 100%;
+/*    border: 3px solid blue;*/
+}
+
+.logo {
+    float: left;
+    width: 10%;
+    margin-top: 10px;
+    min-width: 120px;
+/*    border: 3px solid orange;*/
+}
+
+.content-menu-buttons {
+/*    border: 3px solid red;*/
+    margin-left: 11%;
+    margin-top: 10px;
+}
+
+.content-menu-teams {
+    margin-left: 11%;
+    margin-top: 10px;
+    margin-bottom: 0%;
+}
+
+a.content-menu-button {
+    background-color: #e2e2e2;
+    box-shadow: 2px 2px 1px -1px #333;
+    border-radius: 5px 5px 0px 0px;
+    color: #555;
+    padding: 8px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 2px 5px 2px;
+    border-bottom: 4px solid #CCC;
+}
+
+a.content-menu-button:hover, a.content-menu-button:active {
+    border-bottom: 4px solid #18B;
+}
