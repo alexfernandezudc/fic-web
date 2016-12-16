@@ -21,19 +21,25 @@ ul.topnav li a {
   display: inline-block;
   color: #f2f2f2;
   text-align: left;
+  height: 24px;
   padding: 14px 16px;
   text-decoration: none;
   transition: 0.3s;
-  font-size: 18px;
+  font-size: 16px;
 }
 
-ul.topnav li a:hover {
+ul.topnav li a.pest:hover, .selected:hover {
   background-color: #1c76b0;
 }
 
 ul.topnav li.icon {
   display: none;
 }
+
+.selected {
+	background-color: #1c76b0;
+}
+
 
 @media screen and (max-width:1024px) {
 
@@ -71,6 +77,11 @@ ul.topnav li.icon {
     text-align: left;
     font-size: 16px
   }
+
+  .selected {
+	background-color: #08436b;
+  }
+
 }
 
 /*--------------------------------- TABLE -------------------------------------*/
