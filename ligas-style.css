@@ -1,0 +1,380 @@
+body {
+  margin:0;
+  min-width: 320px;
+}
+
+/* ----------------------------- TOPNAV ----------------------------- */
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #08436b;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+ul.topnav li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: left;
+  line-height: 24px;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+ul.topnav li a.pest:hover, .selected:hover {
+  background-color: #1c76b0;
+}
+
+ul.topnav li.icon {
+  display: none;
+}
+
+.selected {
+  background-color: #1c76b0;
+}
+
+
+@media screen and (max-width:1024px) {
+
+  ul.topnav li:not(:first-child) {
+    display: none;
+    border-right: 0px;
+  }
+
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:1024px) {
+
+  ul.topnav.t0 {
+    position: relative;
+  }
+
+  ul.topnav.t0 li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  ul.topnav.t0 li {
+    float: none;
+    display: inline;
+    border-right: none;
+  }
+
+  ul.topnav.t0 li a {
+    display: block;
+    text-align: left;
+    font-size: 16px
+  }
+
+  .selected {
+  background-color: #08436b;
+  }
+
+}
+
+/*--------------------------------- CONTENT ------------------------------------*/
+
+@media screen and (max-width:1130px) {
+  
+  .details {
+    display: none;
+  }
+  /**
+  .leagues {
+    display: table;
+    overflow: auto;
+    position: relative;
+    width: 100%;
+  }
+  
+  .league {
+    display: table;
+    width: 100%;
+    overflow: auto;
+    border: 1px solid red;
+  }
+  
+  .image-center {
+    display:table-cell;
+    width: 10%;
+  }
+
+  .logo {
+    width:;
+  }
+
+  .league-name {
+    display: table-cell;
+    width: 90%;
+    vertical-align: middle
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+
+    border: 1px solid blue;
+  }
+  **/
+  .content {
+    overflow: auto;
+    position: relative;
+  }
+
+  .leagues {
+    overflow: auto;
+    position: relative;
+}
+
+.league {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    overflow: auto;
+}
+
+.league:hover {
+    background: #D8D3CB;
+}
+
+.image-center {
+    display: table-cell;
+    width: 9%;
+    padding: 1%;
+}
+.logo {
+  width: 100%;
+}
+
+.league-name {
+    display: table-cell;
+    vertical-align: middle;
+    margin: 2px 0px 5px 0px;
+
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+}
+
+}
+
+@media screen and (min-width:1130px) {
+
+  .content {
+    display: table;
+    overflow: auto;
+    text-align: center;
+  }
+
+  /* Containers -------------- */
+  .leagues {
+    display: table-cell;
+    position: relative;
+    width: 70%;
+    margin: 20px 0px 20px 0px;
+  }
+
+  .details {
+    display: table-cell;
+    background: #08436b;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: -7px 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+    font-family: 'Lato', sans-serif;
+  }
+
+  /* Elements in leagues ----- */
+  .league {
+    display: inline-block;
+    max-width: 350px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin: 10px 15px 10px 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .league:hover {
+    background: #cccccc;
+  }
+
+  .league-name {
+    padding: 5px 0px 5px 0px;
+    display: block;
+
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+
+  }
+
+  .logo {
+    width: 30%;
+  }
+
+  .image-center {
+    display: block;
+    text-align: center;
+  }
+
+  /* Elements in details ----- */
+
+  .details-league-name {
+    display:inline-table;
+    width: 95%;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+
+    color: white;
+  }
+
+  .details-league-description {
+    display:inline-table;
+    width: 95%;
+    border-bottom: 1px solid white;
+    margin-top: 10px;
+
+    color: white;
+    text-align: left;
+  }
+
+  .details-league-teams {
+    display:inline-table;
+    width: 95%;
+    border-bottom: 1px solid white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    background: #f9f9f9;
+
+    color: white;
+    vertical-align: middle;
+  }
+
+  .details-league-summary-label {
+    display: inline-table;
+    width: 95%;
+    border-top: 1px solid white;
+    padding-top: 5px;
+
+    color: white;
+    text-align: left;
+  }
+
+  .details-league-summary {
+    display: inline-table;
+    width: 95%;
+    margin-top: 10px;
+    border-top: 1px solid white;
+    background: #f9f9f9;
+
+    border-collapse: collapse;
+  }
+
+  td, th {
+    border-top: 1px solid #dddddd;
+    padding: 2px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #d4d6d8;
+  }
+
+  .details-league-button {
+    display: inline-table;
+    margin-top: 10px;
+    padding: 7px 7px 7px 7px;
+    border-radius: 7px;
+    background-color: #b6e6f9;
+
+    text-decoration: none;
+    color: #42788e;
+  }
+
+    .details-league-button:hover {
+    display: inline-table;
+    margin-top: 10px;
+    padding: 7px 7px 7px 7px;
+    border-radius: 7px;
+    box-shadow: none;
+
+    font-weight: bold;
+  }
+
+
+}
+
+/*--------------------------------- FOOTER -------------------------------------*/
+
+.footer-distributed{
+  background-color: #08436b;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 5px 25px;
+  margin-top: 0px;
+}
+
+.footer-distributed .footer-left p{
+  color:  #8f9296;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Footer links */
+
+.footer-distributed p.footer-links{
+  font-size:15px;
+  font-weight: bold;
+  color:  #ffffff;
+  margin: 0 0 5px;
+  padding: 0;
+}
+
+.footer-distributed p.footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-right{
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color:  #045382;
+  border-radius: 2px;
+
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-left: 3px;
+}
