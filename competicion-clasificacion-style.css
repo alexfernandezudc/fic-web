@@ -162,7 +162,6 @@ ul.topnav li.icon {
 }
 
 .content-menu {
-    overflow: auto;
     width: 100%;
 }
 
@@ -236,25 +235,44 @@ a.content-menu-button:hover, a.content-menu-button:active {
 
 /* FILTRO EQUIPOS */
 .menu_competicion_filters {
-    display: inline-block;
-    width: 860px;
+    overflow: auto;
     background-color: #FFF;
     text-shadow: 0 0 0;
     padding: 10px 10px 10px 10px;
     margin-top: -3px;
     border-top: 1px solid #CCC;
     border-bottom: 1px solid #CCC;
+    text-align: center;
 }
 
 .logo_equipo_menu_container {
     float: left;
     font-family: 'Open Sans Condensed', sans-serif;
     padding: 4px 5px 2px 5px;
+    display: inline-block;
     background-color: #F0F0F0;
-    margin: 0px 3px 0px 2px;
+    margin: 3px 3px 3px 3px;
     border-bottom: 4px solid #CCC;
     box-shadow: 1px -2px 5px -1px #000;
     border-radius: 8px 8px 0px 0px;
+}
+
+/* BOTON INFORMACION */
+.information {
+	  background-color: #F0F0F0;
+    border: none;
+    color: white;
+    padding: 5px;
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 1px -1px 3px -1px #000;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    color: black
 }
 
 /*--------------------------------- TABLE -------------------------------------*/
@@ -294,6 +312,8 @@ h2 {
     .rwd {width:100%;overflow:auto;}
         .rwd table.rwd_auto {width:auto;min-width:100%}
             .rwd_auto th,.rwd_auto td {white-space: nowrap;}
+
+/*--------------------------------- SIZE -------------------------------------*/            
             
     @media only screen and (max-width: 610px)  
     {
@@ -336,5 +356,11 @@ h2 {
         .content-menu-buttons {
           margin-left: 10px;
           margin-top: 10px;
+        }
+        .content-menu-buttons {
+        	text-align: center;
+        }
+        .menu_competicion_filters {
+
         }
     }
