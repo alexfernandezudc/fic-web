@@ -1,0 +1,95 @@
+/* ----------------------------- HEADER STYLES ----------------------------- */
+.header-div {
+	height: 165px;
+	width: 100%;
+	position: relative;
+}
+
+.pest-header {
+	position:absolute;
+	bottom: 0px;
+    left: 0px;
+    font-size: 10px;
+}
+
+a.pest:link, a.pest:visited {
+    background-color: #2397de;
+    border-left: 1px solid #0e71b4;
+    border-right: 1px solid #0e71b4;
+    border-top: 1px solid #0e71b4;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.pest:hover, a.pest:active {
+    background-color: #666;
+    border-right: 1px solid #999;
+    border-left: 1px solid #999;
+    border-top: 1px solid #999;
+}
+
+.content-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    background-color: #08436b;
+    font-size: 15px;
+    color: white;
+}
+
+/* ----------------------------- CONTENT MENU ----------------------------- */
+.leagues-list {
+    width: 75%;
+    float: left;
+  /*  border: 1px solid orange;*/
+}
+
+.leagues-matches {
+    width: 24%;
+    float: right;
+}
+
+.league {
+    border-bottom: 1px solid #ccc;
+    overflow: auto;
+}
+
+.league:hover {
+    background: #D8D3CB;
+}
+
+.logo {
+    float:left;
+    width: 9%;
+    padding: 1%;
+}
+
+.league-name {
+    display: block;
+    height: 25%;
+
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+    margin: 2px 0px 5px 0px;
+}
+
+.league-description {
+    display: block;
+    height: 25%;
+
+    font-size: 12px;
+    color: #3181b3;
+    font-style: italic;
+    margin: 0px 0px 5px 0px;
+}
+
+.league-teams {
+    display: block;
+    height: 50%;
+    margin: 0px 0px 2px 0px;
+}

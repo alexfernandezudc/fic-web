@@ -1,56 +1,166 @@
 <!DOCTYPE html>
-<!--
-	esto es un comentario 
--->
 <html>
 <head>
-  <link rel="stylesheet" href="ligas_styles.css">
+  <link rel="stylesheet" href="ligas-style.css">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<div class="header-div">
-		<img src="header_fgp_hp.jpg" alt="Imagen cabecera" width="100%" height="100%">
-		<span class="pest-header">
-			<a class="pest" href="http://www.hockeypatines.fgpatinaxe.gal/">AGENDA<br>FGPATINAXE </a><a class="pest" href="http://www.hockeypatines.fgpatinaxe.gal/">HOCKEY<br>PATINES</a><a class="pest" href="http://www.hockeypatines.fgpatinaxe.gal/">HOCKEY<br>LINEA</a>
-		<span>
-	</div>
 
-	<div class="content-title">COMPETICIONES 2016/17</div>
-	<div class="leagues-list"/>
-		<div class="league">
-			<span class="logo" ><img src="big_logo.png" width="100%"></span>
-			<span class="league-name">LIGA SENIOR AUTONÓMICA</span>
-			<span class="league-description">LIGA REGULAR IDA Y VUELTA. 8 PRIMEROS CLASIFICAN PARA CUARTOS DE FINAL - IDA Y VUELTA Y LOS CUATRO CLASIFICADOS JUGARAN LA F4</span>
-			<div class="league-teams">
-				<img src="talksdj.png" width="40px">
-				<img src="hc_borbolla.png" width="40px">
-				<img src="hc_borbolla.png" width="40px">
-				<img src="dominicos.png" width="40px">
-				<img src="compania_maria.png" width="40px">
-				<img src="compania_maria.png" width="40px">
-				<img src="escola_lubians.png" width="40px">
-				<img src="raxoi.png" width="40px">
-				<img src="hcl.png" width="40px">
-				<img src="ac_ordenes.png" width="40px">
-				<img src="compostela.png" width="40px">
-			</div>
-		</div>
-		<div class="league">
-			<span class="logo" ><img src="big_logo.png" width="100%"></span>
-			<span class="league-name">LIGA JUNIOR AUTONÓMICA</span>
-			<span class="league-description">LIGA REGULAR IDA Y VUELTA. 8 PRIMEROS CLASIFICAN PARA CUARTOS DE FINAL - IDA Y VUELTA Y LOS CUATRO CLASIFICADOS JUGARAN LA F4. 8 PRIMEROS CLASIFICADOS PRIMERA VUELTA JUGARÁN LA COPA FEDERACIÓN.</span>
-			<div class="league-teams">
-				<img src="dominicos.png" width="40px">
-				<img src="compania_maria.png" width="40px">
-				<img src="ac_ordenes.png" width="40px">
-				<img src="compostela.png" width="40px">
-				<img src="hcl.png" width="40px">
-				<img src="compania_maria.png" width="40px">
-				<img src="escola_lubians.png" width="40px">
-				<img src="talksdj.png" width="40px">
-				<img src="ac_ordenes.png" width="40px">
-				<img src="compostela.png" width="40px">
-			</div>
-		</div>
-	</div>
-	<div class="leagues-matches">LEAGUES-MATCHES</div>
+<img src="header_fgp_hp.jpg" alt="Imagen cabecera" width="100%" height="100%">
+<ul class="topnav" id="menu">
+  <li><a class="selected" href="index.html">AGENDA FGPATINAXE</a></li>
+  <li><a class="pest" href="#">HOCKEY PATINES</a></li>
+  <li><a class="pest" href="#">HOCKEY LINEA</a></li>
+  <li class="icon"><a href="javascript:void(0);" style="font-size:16px;" onclick="myFunction()">☰</a></li>
+</ul>
+<!-- ####################### CONTENIDO ######################### -->
+<div class="content">
+    <div class="leagues" id="leagues">
+        <div class="league">
+            <span class="image-center"><img class="logo" src="big_logo.png" ></span>
+            <span class="league-name">LIGA SENIOR AUTONÓMICA</span>
+        </div>
+        <div class="league">
+            <span class="image-center"><img class="logo" src="big_logo.png" ></span>
+            <span class="league-name">COPA FEDERACION SENIOR MASCULINA</span>
+        </div>
+        <div class="league">
+            <span class="image-center"><img class="logo" src="big_logo.png" ></span>
+            <span class="league-name">LIGA JUNIOR AUTONÓMICA</span>
+        </div>
+        <div class="league">
+            <span class="image-center"><img class="logo" src="big_logo.png" ></span>
+            <span class="league-name">LIGA JUVENIL AÚTONÓMICA</span>
+        </div>
+        <div class="league">
+            <span class="image-center"><img class="logo" src="big_logo.png" ></span>
+            <span class="league-name">LIGA INFANTIL 1ª DIVISIÓN AUTONÓMICA</span>
+        </div>
+        <div class="league">
+            <span class="image-center"><img class="logo" src="big_logo.png" ></span>
+            <span class="league-name">LIGA INFANTIL 2ª DIVISIÓN AUTONÓMICA</span>
+        </div>
+        <div class="league">
+            <span class="image-center"><img class="logo" src="big_logo.png" ></span>
+            <span class="league-name">COPA FEDERACIÓN FEMENINA</span>
+        </div>
+        <div class="league">
+            <span class="image-center"><img class="logo" src="big_logo.png" ></span>
+            <span class="league-name">LIGA ALEVIN 1ª</span>
+        </div>
+        <div class="league">
+            <span class="image-center"><img class="logo" src="big_logo.png" ></span>
+            <span class="league-name">LIGA ALEVIN 2ª</span>
+        </div>
+        <div class="league">
+            <span class="image-center"><img class="logo" src="big_logo.png" ></span>
+            <span class="league-name">LIGA BENJAMIN 1ª</span>
+        </div>
+    </div>
+    <div class="details" id="details">
+      <span class="details-league-name">LIGA SENIOR AUTONÓMICA</span>
+      <div class="details-league-description">
+        <ul>
+          <li>Liga regular ida y vuelta</li>
+          <li>8 primeros clasifican para cuartos de final (ida y vuelta) y los cuatro clasificados jugarán la F4</li>
+          <li>8 primeros clasificados primera vuelta jugarán la copa confederación</li>
+        </ul>
+      </div>
+      <div class="details-league-teams">
+        <img src="talksdj.png" width="40px">
+        <img src="hc_borbolla.png" width="40px">
+        <img src="hc_borbolla.png" width="40px">
+        <img src="dominicos.png" width="40px">
+        <img src="compania_maria.png" width="40px">
+        <img src="compania_maria.png" width="40px">
+        <img src="escola_lubians.png" width="40px">
+        <img src="raxoi.png" width="40px">
+        <img src="hcl.png" width="40px">
+        <img src="ac_ordenes.png" width="40px">
+        <img src="compostela.png" width="40px">
+      </div>
+      <span class="details-league-summary-label">Resumen:</span>
+      <table class="details-league-summary">
+        <tr>
+          <td>BOR B</td>
+          <td>3:9</td>
+          <td>TRAV</td>
+        </tr>
+        <tr>
+          <td>CIA A</td>
+          <td>7:0</td>
+          <td>BOR A</td>
+        </tr>
+        <tr>
+          <td>COM</td>
+          <td>-</td>
+          <td>RAX</td>
+        </tr>
+        <tr>
+          <td>LUB</td>
+          <td>-</td>
+          <td>LIC</td>
+        </tr>
+        <tr>
+          <td>DOM</td>
+          <td>6:1</td>
+          <td>CIA B</td>
+        </tr>
+      </table>
+      <a class="details-league-button" href="#">Ver detalles >></a>
+    </div>
+</div>
+
+
+
+<!-- ####################### CONTENIDO ######################### --> 
+
+<footer class="footer-distributed">
+ 
+      <div class="footer-right">
+
+        <a href="https://www.facebook.com/fgpatinaxe/"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/FGPatinaxe#"><i class="fa fa-twitter"></i></a>
+
+      </div>
+
+      <div class="footer-left">
+
+        <p class="footer-links">
+          <a href="#">Home</a>
+          ·
+          <a href="#">FAQ</a>
+          ·
+          <a href="#">Contacto</a>
+        </p>
+
+        <p>Company Name &copy; 2015</p>
+      </div>
+
+    </footer>
+
+<script>
+  function myFunction() {
+      var x = document.getElementById("menu");
+      if (x.className === "topnav") {
+          x.className += " t0";
+      } else {
+          x.className = "topnav";
+      }
+  }
+  // Misma altura para leagues y details
+  var right=document.getElementById('details').style.offsetHeight;
+  var left=document.getElementById('leagues').style.offsetHeight;
+  if(left>right)
+  {
+      document.getElementById('details').style.offsetHeight=left;
+  }
+  else
+  {
+      document.getElementById('leagues').style.offsetHeight=right;
+  }
+</script>
+
 </body>
+</html>
