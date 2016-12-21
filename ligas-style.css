@@ -43,7 +43,7 @@ ul.topnav li.icon {
 }
 
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1130px) {
 
   ul.topnav li:not(:first-child) {
     display: none;
@@ -56,7 +56,7 @@ ul.topnav li.icon {
   }
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1130px) {
 
   ul.topnav.t0 {
     position: relative;
@@ -88,45 +88,22 @@ ul.topnav li.icon {
 
 /*--------------------------------- CONTENT ------------------------------------*/
 
+/* ---------- MOVIL ---------- */
 @media screen and (max-width:1130px) {
   
   .details {
     display: none;
   }
-  /**
-  .leagues {
-    display: table;
-    overflow: auto;
-    position: relative;
-    width: 100%;
-  }
-  
-  .league {
-    display: table;
-    width: 100%;
-    overflow: auto;
-    border: 1px solid red;
-  }
-  
-  .image-center {
-    display:table-cell;
-    width: 10%;
-  }
 
-  .logo {
-    width:;
-  }
-
-  .league-name {
-    display: table-cell;
-    width: 90%;
-    vertical-align: middle
-    text-align: center;
+  .detailsm {
+    display: inline-table;
     font-family: 'Lato', sans-serif;
-
-    border: 1px solid blue;
+    text-align: center;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    background-color: #b1aca4;
   }
-  **/
+
   .content {
     overflow: auto;
     position: relative;
@@ -135,41 +112,122 @@ ul.topnav li.icon {
   .leagues {
     overflow: auto;
     position: relative;
-}
+  }
 
-.league {
-    display: table;
+  .league {
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+      overflow: auto;
+      transition: 0.3s;
+  }
+  
+  .league:hover {
+      background: #b1aca4;
+  }
+  
+  .image-center {
+      display: block;
+      float: left;
+      width: 9%;
+      padding: 1%;
+  }
+  .logo {
     width: 100%;
-    border-bottom: 1px solid #ccc;
-    overflow: auto;
-}
+  }
+  
+  .league-name {
+      display: block;
+      margin-left : 55px;
+      padding-top : 4%;
+      padding-bottom: 4%;
+  
+      font-size: 16px;
+      color: #333;
+      font-weight: 600;
+      font-family: 'Lato', sans-serif;
+  }
 
-.league:hover {
-    background: #D8D3CB;
-}
+  /* Details objects */
+  .details-league-name {
+    display: none;
+  }
 
-.image-center {
-    display: table-cell;
-    width: 9%;
-    padding: 1%;
-}
-.logo {
-  width: 100%;
-}
+  .details-league-description {
+    display: inline-table;
+    width: 95%;
+    border-bottom: 1px solid white;
 
-.league-name {
-    display: table-cell;
+    text-align: left;
+  }
+
+  .details-league-teams {
+    display: inline-table;
+    width: 95%;
+    border-bottom: 1px solid white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px 0px 5px 0px;
+    border-radius: 5px;
+    background: #f9f9f9;
+
     vertical-align: middle;
-    margin: 2px 0px 5px 0px;
+  }
 
-    font-size: 16px;
-    color: #333;
-    font-weight: 600;
-    font-family: 'Lato', sans-serif;
+  .details-league-summary-label {
+    display: inline-table;
+    width: 95%;
+    border-top: 1px solid white;
+    padding-top: 5px;
+
+    text-align: left;
+  }
+
+  .details-league-summary {
+    display: inline-table;
+    width: 95%;
+    margin-top: 10px;
+    border-top: 1px solid white;
+    background: #f9f9f9;
+
+    border-collapse: collapse;
+  }
+
+  td, th {
+    border-top: 1px solid #dddddd;
+    padding: 2px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #d4d6d8;
+  }
+
+  .details-league-button {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 7px 7px 7px 7px;
+    border-radius: 7px;
+    background-color: #b6e6f9;
+
+    text-decoration: none;
+    color: #42788e;
+    text-align: center;
+  }
+
+    .details-league-button:hover {
+    display: inline-table;
+    margin-top: 10px;
+    padding: 7px 7px 7px 7px;
+    border-radius: 7px;
+    box-shadow: none;
+
+    font-weight: bold;
+  }
+
 }
 
-}
-
+/* ---------- ESCRITORIO ---------- */
 @media screen and (min-width:1130px) {
 
   .content {
@@ -189,13 +247,14 @@ ul.topnav li.icon {
   .details {
     display: table-cell;
     background: #08436b;
+    padding-top: 30px;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     box-shadow: -7px 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-
+    vertical-align: top;
     font-family: 'Lato', sans-serif;
   }
 
@@ -242,6 +301,7 @@ ul.topnav li.icon {
     border-bottom: 1px solid white;
     padding-bottom: 5px;
 
+    font-size: 22px;
     color: white;
   }
 
@@ -319,6 +379,13 @@ ul.topnav li.icon {
     font-weight: bold;
   }
 
+  .show-team {
+    display: inline;
+  }
+
+  .dont-show {
+    display: none;
+  }
 
 }
 

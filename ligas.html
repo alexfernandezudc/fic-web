@@ -5,80 +5,77 @@
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-
-<img src="header_fgp_hp.jpg" alt="Imagen cabecera" width="100%" height="100%">
+<body onresize="onBodyResize()">
+<img src="header_fgp_hp.jpg" alt="Imagen cabecera" width="100%" display="inline-block"></img>
 <ul class="topnav" id="menu">
-  <li><a class="selected" href="index.html">AGENDA FGPATINAXE</a></li>
-  <li><a class="pest" href="#">HOCKEY PATINES</a></li>
+  <li><a class="pest" id="prueba" href="index.html">AGENDA FGPATINAXE</a></li>
+  <li><a class="selected" href="#">HOCKEY PATINES</a></li>
   <li><a class="pest" href="#">HOCKEY LINEA</a></li>
   <li class="icon"><a href="javascript:void(0);" style="font-size:16px;" onclick="myFunction()">☰</a></li>
 </ul>
 <!-- ####################### CONTENIDO ######################### -->
-<div class="content">
+<div class="content" id="content">
     <div class="leagues" id="leagues">
-        <div class="league">
+        <div class="league" id="LIGA SENIOR AUTONÓMICA" onclick="leagueDetails('LIGA SENIOR AUTONÓMICA')">
             <span class="image-center"><img class="logo" src="big_logo.png" ></span>
             <span class="league-name">LIGA SENIOR AUTONÓMICA</span>
         </div>
-        <div class="league">
-            <span class="image-center"><img class="logo" src="big_logo.png" ></span>
+        <div class="league" id="COPA FEDERACION SENIOR MASCULINA" onclick="leagueDetails('COPA FEDERACION SENIOR MASCULINA')">
+            <span class="image-center" ><img class="logo" src="big_logo.png" ></span>
             <span class="league-name">COPA FEDERACION SENIOR MASCULINA</span>
         </div>
-        <div class="league">
+        <div class="league" id="LIGA JUNIOR AUTONÓMICA" onclick="leagueDetails('LIGA JUNIOR AUTONÓMICA')">
             <span class="image-center"><img class="logo" src="big_logo.png" ></span>
             <span class="league-name">LIGA JUNIOR AUTONÓMICA</span>
         </div>
-        <div class="league">
+        <div class="league" id="LIGA JUVENIL AUTONÓMICA" onclick="leagueDetails('LIGA JUVENIL AUTONÓMICA')">
             <span class="image-center"><img class="logo" src="big_logo.png" ></span>
-            <span class="league-name">LIGA JUVENIL AÚTONÓMICA</span>
+            <span class="league-name">LIGA JUVENIL AUTONÓMICA</span>
         </div>
-        <div class="league">
+        <div class="league" id="LIGA INFANTIL 1ª DIVISIÓN AUTONÓMICA" onclick="leagueDetails('LIGA INFANTIL 1ª DIVISIÓN AUTONÓMICA')">
             <span class="image-center"><img class="logo" src="big_logo.png" ></span>
             <span class="league-name">LIGA INFANTIL 1ª DIVISIÓN AUTONÓMICA</span>
         </div>
-        <div class="league">
+        <div class="league" id="LIGA INFANTIL 2ª DIVISIÓN AUTONÓMICA" onclick="leagueDetails('LIGA INFANTIL 2ª DIVISIÓN AUTONÓMICA')">
             <span class="image-center"><img class="logo" src="big_logo.png" ></span>
             <span class="league-name">LIGA INFANTIL 2ª DIVISIÓN AUTONÓMICA</span>
         </div>
-        <div class="league">
+        <div class="league" id="COPA FEDERACIÓN FEMENINA" onclick="leagueDetails('COPA FEDERACIÓN FEMENINA')">
             <span class="image-center"><img class="logo" src="big_logo.png" ></span>
             <span class="league-name">COPA FEDERACIÓN FEMENINA</span>
         </div>
-        <div class="league">
+        <div class="league" id="LIGA ALEVÍN 1ª" onclick="leagueDetails('LIGA ALEVÍN 1ª')">
             <span class="image-center"><img class="logo" src="big_logo.png" ></span>
-            <span class="league-name">LIGA ALEVIN 1ª</span>
+            <span class="league-name">LIGA ALEVÍN 1ª</span>
         </div>
-        <div class="league">
+        <div class="league" id="LIGA ALEVÍN 2ª" onclick="leagueDetails('LIGA ALEVÍN 2ª')">
             <span class="image-center"><img class="logo" src="big_logo.png" ></span>
-            <span class="league-name">LIGA ALEVIN 2ª</span>
+            <span class="league-name">LIGA ALEVÍN 2ª</span>
         </div>
-        <div class="league">
+        <div class="league" id="LIGA BENJAMÍN 1ª" onclick="leagueDetails('LIGA BENJAMÍN 1ª')">
             <span class="image-center"><img class="logo" src="big_logo.png" ></span>
-            <span class="league-name">LIGA BENJAMIN 1ª</span>
+            <span class="league-name">LIGA BENJAMÍN 1ª</span>
         </div>
     </div>
     <div class="details" id="details">
-      <span class="details-league-name">LIGA SENIOR AUTONÓMICA</span>
+      <span class="details-league-name" id="league-name">LIGA SENIOR AUTONÓMICA</span>
       <div class="details-league-description">
-        <ul>
-          <li>Liga regular ida y vuelta</li>
-          <li>8 primeros clasifican para cuartos de final (ida y vuelta) y los cuatro clasificados jugarán la F4</li>
-          <li>8 primeros clasificados primera vuelta jugarán la copa confederación</li>
-        </ul>
+        <p id="league-description">
+          - Liga regular ida y vuelta<br/>
+          - 8 primeros clasifican para cuartos de final (ida y vuelta) y los cuatro clasificados jugarán la F4<br/>
+          - 8 primeros clasificados primera vuelta jugarán la copa confederación<br/>
+        </p>
       </div>
       <div class="details-league-teams">
-        <img src="talksdj.png" width="40px">
-        <img src="hc_borbolla.png" width="40px">
-        <img src="hc_borbolla.png" width="40px">
-        <img src="dominicos.png" width="40px">
-        <img src="compania_maria.png" width="40px">
-        <img src="compania_maria.png" width="40px">
-        <img src="escola_lubians.png" width="40px">
-        <img src="raxoi.png" width="40px">
-        <img src="hcl.png" width="40px">
-        <img src="ac_ordenes.png" width="40px">
-        <img src="compostela.png" width="40px">
+        <img id="talksdj" src="talksdj.png" width="40px">
+        <img id="hc_borbolla" src="hc_borbolla.png" width="40px">
+        <img id="dominicos" src="dominicos.png" width="40px">
+        <img id="compania_maria" src="compania_maria.png" width="40px">
+        <img id="escola_lubians" src="escola_lubians.png" width="40px">
+        <img id="raxoi" src="raxoi.png" width="40px">
+        <img id="hcl" src="hcl.png" width="40px">
+        <img id="ac_ordenes" src="ac_ordenes.png" width="40px">
+        <img id="compostela" src="compostela.png" width="40px">
       </div>
       <span class="details-league-summary-label">Resumen:</span>
       <table class="details-league-summary">
@@ -141,6 +138,7 @@
     </footer>
 
 <script>
+  // Muestra u oculta la barra de menú en móvil
   function myFunction() {
       var x = document.getElementById("menu");
       if (x.className === "topnav") {
@@ -149,16 +147,175 @@
           x.className = "topnav";
       }
   }
-  // Misma altura para leagues y details
-  var right=document.getElementById('details').style.offsetHeight;
-  var left=document.getElementById('leagues').style.offsetHeight;
-  if(left>right)
-  {
-      document.getElementById('details').style.offsetHeight=left;
+
+  /*
+   Se ejecuta cuando el body cambia de tamaño, y se asegura de que en la versión
+   de escritorio, 'details' no quede colgado de alguna liga.
+  */
+  function onBodyResize(){
+    if  (window.innerWidth >= 1130) {
+      document.getElementById('content').appendChild(document.getElementById('details'));
+      document.getElementById('details').className = 'details';
+    }
   }
-  else
-  {
-      document.getElementById('leagues').style.offsetHeight=right;
+
+  // Es ejecutada al clickar una liga y muestra los detalles de la misma
+  function leagueDetails(leagueName) {
+    var space = window.innerWidth;
+    if (space >= 1130){  // Escritorio
+      changeDetails(leagueName);
+      document.getElementById('content').appendChild(document.getElementById('details'));
+      return;
+    }
+      // Móvil
+      showDetails(leagueName);
+      changeDetails(leagueName);
+  }
+
+  // En móvil mueve el div "details", debajo de liga con nombre 'leagueName'
+  function showDetails(leagueName) {
+    var details = document.getElementById('details');
+    details.className = 'detailsm';
+    document.getElementById(leagueName).appendChild(details); 
+  }
+
+  // Cambia el texto de los elementos en 'details' según el 'leagueName'
+  function changeDetails(leagueName) {
+    document.getElementById("league-name").innerHTML = leagueName;
+    switch(leagueName) {
+    case 'COPA FEDERACION SENIOR MASCULINA':
+      document.getElementById("league-description").innerHTML = "No hay descripción";
+      // Mostrar/Ocultar equipos de cada liga
+      document.getElementById("talksdj").className = "show-team";
+      document.getElementById("hc_borbolla").className = "dont-show";
+      document.getElementById("dominicos").className = "show-team";
+      document.getElementById("compania_maria").className = "dont-show";
+      document.getElementById("escola_lubians").className = "show-team";
+      document.getElementById("raxoi").className = "dont-show";
+      document.getElementById("hcl").className = "show-team";
+      document.getElementById("ac_ordenes").className = "dont-show";
+      document.getElementById("compostela").className = "show-team";
+      break;
+    case 'LIGA SENIOR AUTONÓMICA':
+      document.getElementById("league-description").innerHTML = "- Liga regular ida y vuelta <br />" +
+        "- 8 primeros clasifican para cuartos de final (ida y vuelta) y los cuatro clasificados jugarán la F4 <br />" +
+        "- 8 primeros clasificados primera vuelta jugarán la copa confederación";
+      // Mostrar/Ocultar equipos de cada liga
+      document.getElementById("talksdj").className = "show-team";
+      document.getElementById("hc_borbolla").className = "show-team";
+      document.getElementById("dominicos").className = "show-team";
+      document.getElementById("compania_maria").className = "dont-show";
+      document.getElementById("escola_lubians").className = "show-team";
+      document.getElementById("raxoi").className = "show-team";
+      document.getElementById("hcl").className = "show-team";
+      document.getElementById("ac_ordenes").className = "dont-show";
+      document.getElementById("compostela").className = "show-team";
+      break;
+    case 'LIGA JUNIOR AUTONÓMICA':
+      document.getElementById("league-description").innerHTML = "Liga regular a dos vueltas, los cuatro primeros clasifican para la f4. ";
+      // Mostrar/Ocultar equipos de cada liga
+      document.getElementById("talksdj").className = "show-team";
+      document.getElementById("hc_borbolla").className = "show-team";
+      document.getElementById("dominicos").className = "dont-show";
+      document.getElementById("compania_maria").className = "dont-show";
+      document.getElementById("escola_lubians").className = "show-team";
+      document.getElementById("raxoi").className = "show-team";
+      document.getElementById("hcl").className = "dont-show";
+      document.getElementById("ac_ordenes").className = "dont-show";
+      document.getElementById("compostela").className = "dont-show";
+      break;
+    case 'LIGA JUVENIL AUTONÓMICA':
+      document.getElementById("league-description").innerHTML = "Liga regular ida y vuelta, los cuatro primeros clasifican para la f4. ";
+      // Mostrar/Ocultar equipos de cada liga
+      document.getElementById("talksdj").className = "show-team";
+      document.getElementById("hc_borbolla").className = "show-team";
+      document.getElementById("dominicos").className = "show-team";
+      document.getElementById("compania_maria").className = "dont-show";
+      document.getElementById("escola_lubians").className = "show-team";
+      document.getElementById("raxoi").className = "show-team";
+      document.getElementById("hcl").className = "show-team";
+      document.getElementById("ac_ordenes").className = "dont-show";
+      document.getElementById("compostela").className = "dont-show";
+      break;
+    case 'LIGA INFANTIL 1ª DIVISIÓN AUTONÓMICA':
+      document.getElementById("league-description").innerHTML = "Liga regular ida y vuelta, los cuatro primeros clasifican para la f4. ";
+      // Mostrar/Ocultar equipos de cada liga
+      document.getElementById("talksdj").className = "show-team";
+      document.getElementById("hc_borbolla").className = "show-team";
+      document.getElementById("dominicos").className = "show-team";
+      document.getElementById("compania_maria").className = "dont-show";
+      document.getElementById("escola_lubians").className = "show-team";
+      document.getElementById("raxoi").className = "show-team";
+      document.getElementById("hcl").className = "show-team";
+      document.getElementById("ac_ordenes").className = "show-team";
+      document.getElementById("compostela").className = "show-team";
+      break;
+    case 'LIGA INFANTIL 2ª DIVISIÓN AUTONÓMICA':
+      document.getElementById("league-description").innerHTML = "Liga regular ida y vuelta. ";
+      // Mostrar/Ocultar equipos de cada liga
+      document.getElementById("talksdj").className = "dont-show";
+      document.getElementById("hc_borbolla").className = "show-team";
+      document.getElementById("dominicos").className = "show-team";
+      document.getElementById("compania_maria").className = "dont-show";
+      document.getElementById("escola_lubians").className = "show-team";
+      document.getElementById("raxoi").className = "dont-show";
+      document.getElementById("hcl").className = "show-team";
+      document.getElementById("ac_ordenes").className = "dont-show";
+      document.getElementById("compostela").className = "show-team";
+      break;
+    case 'COPA FEDERACIÓN FEMENINA':
+      document.getElementById("league-description").innerHTML = "Liga regular ida y vuelta. ";
+      // Mostrar/Ocultar equipos de cada liga
+      document.getElementById("talksdj").className = "dont-show";
+      document.getElementById("hc_borbolla").className = "show-team";
+      document.getElementById("dominicos").className = "show-team";
+      document.getElementById("compania_maria").className = "dont-show";
+      document.getElementById("escola_lubians").className = "show-team";
+      document.getElementById("raxoi").className = "dont-show";
+      document.getElementById("hcl").className = "show-team";
+      document.getElementById("ac_ordenes").className = "dont-show";
+      document.getElementById("compostela").className = "dont-show";
+      break;
+    case 'LIGA ALEVÍN 1ª':
+      document.getElementById("league-description").innerHTML = "No hay descripción";
+      // Mostrar/Ocultar equipos de cada liga
+      document.getElementById("talksdj").className = "dont-show";
+      document.getElementById("hc_borbolla").className = "show-team";
+      document.getElementById("dominicos").className = "show-team";
+      document.getElementById("compania_maria").className = "show-team";
+      document.getElementById("escola_lubians").className = "show-team";
+      document.getElementById("raxoi").className = "show-team";
+      document.getElementById("hcl").className = "show-team";
+      document.getElementById("ac_ordenes").className = "dont-show";
+      document.getElementById("compostela").className = "dont-show";
+      break;
+    case 'LIGA ALEVÍN 2ª':
+      document.getElementById("league-description").innerHTML = "No hay descripción";
+      // Mostrar/Ocultar equipos de cada liga
+      document.getElementById("talksdj").className = "dont-show";
+      document.getElementById("hc_borbolla").className = "dont-show";
+      document.getElementById("dominicos").className = "show-team";
+      document.getElementById("compania_maria").className = "show-team";
+      document.getElementById("escola_lubians").className = "dont-show";
+      document.getElementById("raxoi").className = "show-team";
+      document.getElementById("hcl").className = "show-team";
+      document.getElementById("ac_ordenes").className = "dont-show";
+      document.getElementById("compostela").className = "dont-show";
+      break;
+    case 'LIGA BENJAMÍN 1ª':
+      document.getElementById("league-description").innerHTML = "No hay descripción";
+      // Mostrar/Ocultar equipos de cada liga
+      document.getElementById("talksdj").className = "show-team";
+      document.getElementById("hc_borbolla").className = "show-team";
+      document.getElementById("dominicos").className = "show-team";
+      document.getElementById("compania_maria").className = "show-team";
+      document.getElementById("escola_lubians").className = "show-team";
+      document.getElementById("raxoi").className = "show-team";
+      document.getElementById("hcl").className = "show-team";
+      document.getElementById("ac_ordenes").className = "dont-show";
+      document.getElementById("compostela").className = "dont-show";
+      break;
+    }
   }
 </script>
 
