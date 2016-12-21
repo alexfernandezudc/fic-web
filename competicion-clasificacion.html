@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="competicion-clasificacion-style.css">
-  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="competicion-clasificacion-style.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset=utf-8 />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  
+    <script>
+    function myFunction2(enla) {
+        if (window.innerWidth>=1024) {
+            var x = document.getElementById("content");
+            var y = document.getElementById("content2");
+            x.style.display = "none";
+            y.style.display = "block";
+        } else {
+            var x = document.getElementById("content");
+            var y = document.getElementById("content2");
+            y.style.display = "none";
+            x.style.display = "block";
+        }
+        window.onload=myFunction2(this);
+    }
+    </script>
 </head>
-<body>
+<body onresize="myFunction2(this)" onload="myFunction2()"> <!-- onresize="size()"-->
 
 <img src="header_fgp_hp.jpg" alt="Imagen cabecera" width="100%" height="100%">
 <ul class="topnav" id="menu">
@@ -15,19 +33,23 @@
   <li class="icon"><a href="javascript:void(0);" style="font-size:16px;" onclick="myFunction()">☰</a></li>
 </ul>
 
-<div class="content-menu">
+<div id="content" class="content-menu">
     <div class="nombre-competicion">COPA FEDERACIÓN FEMENINA</div>
     <div class="logo"><img src="big_logo.png" width="100%"></div>
-    <div class="content-menu-buttons">
-        <a class="content-menu-button-selected" href="competicion-clasificacion.html"><span class="fa fa-bars icon_boton" aria-hidden="true"></span>CLASIFICACIÓN</a>
-        <a class="content-menu-button" href="#"><span class="fa fa-calendar icon_boton" aria-hidden="true"></span>GOLES</a>
-        <a class="content-menu-button" href="#"><span class="fa fa-bars icon_boton" aria-hidden="true"></span>CALENDARIO Y RESULTADOS</a>
-        <a class="content-menu-button" href="#"><span class="fa fa-area-chart icon_boton" aria-hidden="true"></span>DESIGNACIONES ARBITRALES</a>
-        <a class="content-menu-button" href="#"><span class="fa fa-file icon_boton" aria-hidden="true"></span>TARJETAS</a>
-        <a class="content-menu-button" href="#"><span class="fa fa-male icon_boton" aria-hidden="true"></span>PLANTILLAS</a>
+    <div class="content_buttons_container">
+        <button class="information" onclick="mostrar(this);">Mostrar opciones<span class="fa fa-angle-double-down icon_boton" aria-hidden="true" style="margin-left: 5px"></span></button>
+        <div id="oculto" class="content-menu-buttons">
+            <a class="content-menu-button-selected" href="competicion-clasificacion.html"><span class="fa fa-bars icon_boton" aria-hidden="true"></span>CLASIFICACIÓN</a>
+            <a class="content-menu-button" href="#"><span class="fa fa-calendar icon_boton" aria-hidden="true"></span>GOLES</a>
+            <a class="content-menu-button" href="#"><span class="fa fa-bars icon_boton" aria-hidden="true"></span>CALENDARIO Y RESULTADOS</a>
+            <a class="content-menu-button" href="#"><span class="fa fa-area-chart icon_boton" aria-hidden="true"></span>DESIGNACIONES ARBITRALES</a>
+            <a class="content-menu-button" href="#"><span class="fa fa-file icon_boton" aria-hidden="true"></span>TARJETAS</a>
+            <a class="content-menu-button" href="#"><span class="fa fa-male icon_boton" aria-hidden="true"></span>PLANTILLAS</a>
+        </div>
     </div>
     <div class="menu_competicion_filters">
-        <div class="teams_logos_competicion_listado">   
+        <button class="information" onclick="mostrar2(this); return false;">Mostrar equipos<span class="fa fa-angle-double-down icon_boton" aria-hidden="true" style="margin-left: 5px"></span></button>
+        <div id="oculto2" style="display: none; margin: 10px" class="teams_logos_competicion_listado">   
             <div class="logo_equipo_menu_container" id="teamid_1086">
                 <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/149.png" width="35"></div>
                 <div class="logo_equipo_menu_nombre">LIC</div>
@@ -62,9 +84,64 @@
             </div>
         </div>
     </div>
-    <div style="width: 95%;text-align:center; margin: 10px 10px 10px 10px">
-        <button class="information" onclick="mostrar(this); return false;">Mostrar información<span class="fa fa-angle-double-down icon_boton" aria-hidden="true" style="margin-left: 5px"></span></button>
-        <div id="oculto" style="visibility:hidden; display: none; text-align: left; margin: 10px;">
+    <div style="text-align:center; margin: 10px 10px 10px 10px">
+        <button class="information" onclick="mostrar3(this); return false;">Mostrar información<span class="fa fa-angle-double-down icon_boton" aria-hidden="true" style="margin-left: 5px"></span></button>
+        <div id="oculto3" style="display: none; text-align: left; margin: 10px;">
+            LIGA REGULAR IDA Y VUELTA. 8 PRIMEROS CLASIFICAN PARA CUARTOS DE FINAL - IDA Y VUELTA Y LOS CUATRO CLASIFICADOS JUGARAN LA F4. 8 PRIMEROS CLASIFICADOS PRIMERA VUELTA JUGARAN LA COPA FEDERACION.
+        </div>  
+    </div>        
+</div>
+
+<div id="content2" class="content-menu">
+    <div class="nombre-competicion">COPA FEDERACIÓN FEMENINA</div>
+    <div class="logo"><img src="big_logo.png" width="100%"></div>
+    <div class="content_buttons_container">
+            <a class="content-menu-button-selected" href="competicion-clasificacion.html"><span class="fa fa-bars icon_boton" aria-hidden="true"></span>CLASIFICACIÓN</a>
+            <a class="content-menu-button" href="#"><span class="fa fa-calendar icon_boton" aria-hidden="true"></span>GOLES</a>
+            <a class="content-menu-button" href="#"><span class="fa fa-bars icon_boton" aria-hidden="true"></span>CALENDARIO Y RESULTADOS</a>
+            <a class="content-menu-button" href="#"><span class="fa fa-area-chart icon_boton" aria-hidden="true"></span>DESIGNACIONES ARBITRALES</a>
+            <a class="content-menu-button" href="#"><span class="fa fa-file icon_boton" aria-hidden="true"></span>TARJETAS</a>
+            <a class="content-menu-button" href="#"><span class="fa fa-male icon_boton" aria-hidden="true"></span>PLANTILLAS</a>
+        </div>
+    </div>
+    <div class="menu_competicion_filters">
+        <div id="oculto2" style="margin: 10px" class="teams_logos_competicion_listado">   
+            <div class="logo_equipo_menu_container" id="teamid_1086">
+                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/149.png" width="35"></div>
+                <div class="logo_equipo_menu_nombre">LIC</div>
+            </div>
+            <div class="logo_equipo_menu_container" id="teamid_1087">
+                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/146.png" width="35"></div>
+                <div class="logo_equipo_menu_nombre">BOR</div>
+            </div>
+            <div class="logo_equipo_menu_container" id="teamid_1088">
+                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/145.png" width="35"></div>
+                <div class="logo_equipo_menu_nombre">COM</div>
+            </div>
+            <div class="logo_equipo_menu_container" id="teamid_1089">
+                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/256_1.png" width="35"></div>
+                <div class="logo_equipo_menu_nombre">ORO A</div>
+            </div>
+            <div class="logo_equipo_menu_container" id="teamid_1086">
+                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/149.png" width="35"></div>
+                <div class="logo_equipo_menu_nombre">LIC</div>
+            </div>
+            <div class="logo_equipo_menu_container" id="teamid_1087">
+                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/146.png" width="35"></div>
+                <div class="logo_equipo_menu_nombre">BOR</div>
+            </div>
+            <div class="logo_equipo_menu_container" id="teamid_1088">
+                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/145.png" width="35"></div>
+                <div class="logo_equipo_menu_nombre">COM</div>
+            </div>
+            <div class="logo_equipo_menu_container" id="teamid_1089">
+                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/256_1.png" width="35"></div>
+                <div class="logo_equipo_menu_nombre">ORO A</div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align:center; margin: 10px 10px 10px 10px">
+        <div id="oculto3" style="text-align: left; margin: 10px;">
             LIGA REGULAR IDA Y VUELTA. 8 PRIMEROS CLASIFICAN PARA CUARTOS DE FINAL - IDA Y VUELTA Y LOS CUATRO CLASIFICADOS JUGARAN LA F4. 8 PRIMEROS CLASIFICADOS PRIMERA VUELTA JUGARAN LA COPA FEDERACION.
         </div>  
     </div>        
@@ -231,7 +308,7 @@
     </footer>
 
 <script>
-function myFunction() {
+function myFunction(enla) {
     var x = document.getElementById("menu");
     if (x.className === "topnav") {
         x.className += " t0";
@@ -245,7 +322,20 @@ function myFunction() {
 function mostrar(enla) {
   obj = document.getElementById('oculto');
   obj.style.display = (obj.style.display == 'none') ? 'block' : 'none';
-  obj.style.visibility = (obj.style.visibility == 'hidden') ? 'visible' : 'hidden';
+}
+</script>
+
+<script>
+function mostrar2(enla) {
+  obj = document.getElementById('oculto2');
+  obj.style.display = (obj.style.display == 'none') ? 'block' : 'none';
+}
+</script>
+
+<script>
+function mostrar3(enla) {
+  obj = document.getElementById('oculto3');
+  obj.style.display = (obj.style.display == 'none') ? 'block' : 'none';
 }
 </script>
 

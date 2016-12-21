@@ -159,10 +159,12 @@ ul.topnav li.icon {
   color: #f2f2f2;
   border-top: 1px solid #bbb;
   padding: 0px 16px 0px 16px;
+  text-align: left;
 }
 
 .content-menu {
     width: 100%;
+    text-align: center;
 }
 
 /* LOGO */
@@ -181,6 +183,7 @@ ul.topnav li.icon {
     margin-left: 11%;
     margin-top: 10px;
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .content-menu-teams {
@@ -234,15 +237,13 @@ a.content-menu-button:hover, a.content-menu-button:active {
 }
 
 /* FILTRO EQUIPOS */
-.menu_competicion_filters {
+.menu_competicion_filters, .content_buttons_container {
     overflow: auto;
     background-color: #FFF;
     text-shadow: 0 0 0;
     padding: 10px 10px 10px 10px;
-    margin-top: -3px;
-    border-top: 1px solid #CCC;
     border-bottom: 1px solid #CCC;
-    text-align: center;
+    text-align: left;
 }
 
 .logo_equipo_menu_container {
@@ -259,11 +260,11 @@ a.content-menu-button:hover, a.content-menu-button:active {
 
 /* BOTON INFORMACION */
 .information {
-	  background-color: #F0F0F0;
+	background-color: #F0F0F0;
     border: none;
     color: white;
     padding: 5px;
-    width: 50%;
+    width: 100%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -315,7 +316,7 @@ h2 {
 
 /*--------------------------------- SIZE -------------------------------------*/            
             
-    @media only screen and (max-width: 610px)  
+    @media only screen and (max-width: 1024px)  
     {
     
         table.width200, .width200 thead, .width200 tbody, .width200 th, .width200 td, .width200 tr { display: block; }
@@ -348,19 +349,14 @@ h2 {
     }
     
     /* Smartphones (portrait and landscape) ----------- */
-    @media only screen and (max-width : 610px) 
+    @media only screen and (max-width : 1024px) 
     {
-        /*body { width: 320px; }*/
         .descarto {display:none;}
         .logo {display: none}
         .content-menu-buttons {
           margin-left: 10px;
           margin-top: 10px;
-        }
-        .content-menu-buttons {
-        	text-align: center;
-        }
-        .menu_competicion_filters {
+          text-align: center;
 
-        }
+        }  
     }
