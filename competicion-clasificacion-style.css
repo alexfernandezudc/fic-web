@@ -205,6 +205,7 @@ a.content-menu-button {
     font-size: 12px;
     margin: 2px 2px 5px 2px;
     border-bottom: 4px solid #CCC;
+    cursor: pointer;
 }
 
 a.content-menu-button-selected {
@@ -219,6 +220,7 @@ a.content-menu-button-selected {
     font-size: 12px;
     margin: 2px 2px 5px 2px;
     border-bottom: 4px solid #18B;
+    cursor: pointer;
 }
 
 a.content-menu-button:hover, a.content-menu-button:active {

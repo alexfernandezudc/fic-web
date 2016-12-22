@@ -19,324 +19,367 @@
             y.style.display = "none";
             x.style.display = "block";
         }
-        window.onload=myFunction2(this);
     }
+    </script>
+    <script>
+    function categoria(enla,x) {
+        for (var i = 1; i <= 6; i++) {
+            var obj = document.getElementById('c' + i);
+            var obj2 = document.getElementById('b' + i);
+            var obj3 = document.getElementById('a' + i);
+            obj.style.display = 'none';
+            if (obj2.className == "content-menu-button-selected") {
+                obj2.className = " content-menu-button";
+            }
+            if (obj3.className == "content-menu-button-selected") {
+                obj3.className = " content-menu-button";
+            }            
+        }
+        var obj = document.getElementById('c' + x);
+        var obj2 = document.getElementById('b' + x);
+        var obj3 = document.getElementById('a' + x);
+        obj.style.display = 'block';
+        obj2.className = "content-menu-button-selected";
+        obj3.className = "content-menu-button-selected";
+    }    
     </script>
 </head>
 <body onresize="myFunction2(this)" onload="myFunction2()"> <!-- onresize="size()"-->
 
-<img src="header_fgp_hp.jpg" alt="Imagen cabecera" width="100%" height="100%">
-<ul class="topnav" id="menu">
-  <li><a class="pest" href="index.html">AGENDA FGPATINAXE</a></li>
-  <li><a class="selected" href="ligas.html">HOCKEY PATINES</a></li>
-  <li><a class="pest" href="#">HOCKEY LINEA</a></li>
-  <li class="icon"><a href="javascript:void(0);" style="font-size:16px;" onclick="myFunction()">☰</a></li>
-</ul>
+    <img src="header_fgp_hp.jpg" alt="Imagen cabecera" width="100%" height="100%">
+    <ul class="topnav" id="menu">
+      <li><a class="pest" href="index.html">AGENDA FGPATINAXE</a></li>
+      <li><a class="selected" href="ligas.html">HOCKEY PATINES</a></li>
+      <li><a class="pest" href="#">HOCKEY LINEA</a></li>
+      <li class="icon"><a href="javascript:void(0);" style="font-size:16px;" onclick="myFunction()">☰</a></li>
+    </ul>
 
-<div id="content" class="content-menu">
-    <div class="nombre-competicion">COPA FEDERACIÓN FEMENINA</div>
-    <div class="logo"><img src="big_logo.png" width="100%"></div>
-    <div class="content_buttons_container">
-        <button class="information" onclick="mostrar(this);">Mostrar opciones<span class="fa fa-angle-double-down icon_boton" aria-hidden="true" style="margin-left: 5px"></span></button>
-        <div id="oculto" class="content-menu-buttons">
-            <a class="content-menu-button-selected" href="competicion-clasificacion.html"><span class="fa fa-bars icon_boton" aria-hidden="true"></span>CLASIFICACIÓN</a>
-            <a class="content-menu-button" href="#"><span class="fa fa-calendar icon_boton" aria-hidden="true"></span>GOLES</a>
-            <a class="content-menu-button" href="#"><span class="fa fa-bars icon_boton" aria-hidden="true"></span>CALENDARIO Y RESULTADOS</a>
-            <a class="content-menu-button" href="#"><span class="fa fa-area-chart icon_boton" aria-hidden="true"></span>DESIGNACIONES ARBITRALES</a>
-            <a class="content-menu-button" href="#"><span class="fa fa-file icon_boton" aria-hidden="true"></span>TARJETAS</a>
-            <a class="content-menu-button" href="#"><span class="fa fa-male icon_boton" aria-hidden="true"></span>PLANTILLAS</a>
+    <div id="content" class="content-menu">
+        <div class="nombre-competicion">COPA FEDERACIÓN FEMENINA</div>
+        <div class="logo"><img src="big_logo.png" width="100%"></div>
+        <div class="content_buttons_container">
+            <button class="information" onclick="mostrar(this);">Mostrar opciones<span class="fa fa-angle-double-down icon_boton" aria-hidden="true" style="margin-left: 5px"></span></button>
+            <div id="oculto" class="content-menu-buttons">
+                <a id="a1" class="content-menu-button-selected" onclick="categoria(this,1)"><span class="fa fa-bars icon_boton" aria-hidden="true"></span>CLASIFICACIÓN</a>
+                <a id="a2" class="content-menu-button" onclick="categoria(this,2)"><span class="fa fa-calendar icon_boton" aria-hidden="true"></span>GOLES</a>
+                <a id="a3" class="content-menu-button" onclick="categoria(this,3)"><span class="fa fa-bars icon_boton" aria-hidden="true"></span>CALENDARIO Y RESULTADOS</a>
+                <a id="a4" class="content-menu-button" onclick="categoria(this,4)"><span class="fa fa-area-chart icon_boton" aria-hidden="true"></span>DESIGNACIONES ARBITRALES</a>
+                <a id="a5" class="content-menu-button" onclick="categoria(this,5)"><span class="fa fa-file icon_boton" aria-hidden="true"></span>TARJETAS</a>
+                <a id="a6" class="content-menu-button" onclick="categoria(this,6)"><span class="fa fa-male icon_boton" aria-hidden="true"></span>PLANTILLAS</a>
+            </div>
         </div>
+        <div class="menu_competicion_filters">
+            <button class="information" onclick="mostrar2(this); return false;">Mostrar equipos<span class="fa fa-angle-double-down icon_boton" aria-hidden="true" style="margin-left: 5px"></span></button>
+            <div id="oculto2" style="display: none; text-align: left; margin: 10px;" class="teams_logos_competicion_listado">   
+                <div class="logo_equipo_menu_container" id="teamid_1086">
+                    <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/149.png" width="35"></div>
+                    <div class="logo_equipo_menu_nombre">LIC</div>
+                </div>
+                <div class="logo_equipo_menu_container" id="teamid_1087">
+                    <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/146.png" width="35"></div>
+                    <div class="logo_equipo_menu_nombre">BOR</div>
+                </div>
+                <div class="logo_equipo_menu_container" id="teamid_1088">
+                    <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/145.png" width="35"></div>
+                    <div class="logo_equipo_menu_nombre">COM</div>
+                </div>
+                <div class="logo_equipo_menu_container" id="teamid_1089">
+                    <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/256_1.png" width="35"></div>
+                    <div class="logo_equipo_menu_nombre">ORO A</div>
+                </div>
+                <div class="logo_equipo_menu_container" id="teamid_1086">
+                    <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/149.png" width="35"></div>
+                    <div class="logo_equipo_menu_nombre">LIC</div>
+                </div>
+                <div class="logo_equipo_menu_container" id="teamid_1087">
+                    <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/146.png" width="35"></div>
+                    <div class="logo_equipo_menu_nombre">BOR</div>
+                </div>
+                <div class="logo_equipo_menu_container" id="teamid_1088">
+                    <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/145.png" width="35"></div>
+                    <div class="logo_equipo_menu_nombre">COM</div>
+                </div>
+                <div class="logo_equipo_menu_container" id="teamid_1089">
+                    <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/256_1.png" width="35"></div>
+                    <div class="logo_equipo_menu_nombre">ORO A</div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin: 10px 10px 10px 10px">
+            <button class="information" onclick="mostrar3(this); return false;">Mostrar información<span class="fa fa-angle-double-down icon_boton" aria-hidden="true" style="margin-left: 5px"></span></button>
+            <div id="oculto3" style="display: none; text-align: left; margin: 10px;">
+                LIGA REGULAR IDA Y VUELTA. 8 PRIMEROS CLASIFICAN PARA CUARTOS DE FINAL - IDA Y VUELTA Y LOS CUATRO CLASIFICADOS JUGARAN LA F4. 8 PRIMEROS CLASIFICADOS PRIMERA VUELTA JUGARAN LA COPA FEDERACION.
+            </div>  
+        </div>        
     </div>
-    <div class="menu_competicion_filters">
-        <button class="information" onclick="mostrar2(this); return false;">Mostrar equipos<span class="fa fa-angle-double-down icon_boton" aria-hidden="true" style="margin-left: 5px"></span></button>
-        <div id="oculto2" style="display: none; text-align: left; margin: 10px;" class="teams_logos_competicion_listado">   
-            <div class="logo_equipo_menu_container" id="teamid_1086">
-                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/149.png" width="35"></div>
-                <div class="logo_equipo_menu_nombre">LIC</div>
+
+    <div id="content2" class="content-menu">
+        <div class="nombre-competicion">COPA FEDERACIÓN FEMENINA</div>
+        <div class="logo"><img src="big_logo.png" width="100%"></div>
+        <div class="content_buttons_container">
+                <a id="b1" class="content-menu-button-selected" onclick="categoria(this,1)"><span class="fa fa-bars icon_boton" aria-hidden="true"></span>CLASIFICACIÓN</a>
+                <a id="b2" class="content-menu-button" onclick="categoria(this,2)"><span class="fa fa-calendar icon_boton" aria-hidden="true"></span>GOLES</a>
+                <a id="b3" class="content-menu-button" onclick="categoria(this,3)"><span class="fa fa-bars icon_boton" aria-hidden="true"></span>CALENDARIO Y RESULTADOS</a>
+                <a id="b4" class="content-menu-button" onclick="categoria(this,4)"><span class="fa fa-area-chart icon_boton" aria-hidden="true"></span>DESIGNACIONES ARBITRALES</a>
+                <a id="b5" class="content-menu-button" onclick="categoria(this,5)"><span class="fa fa-file icon_boton" aria-hidden="true"></span>TARJETAS</a>
+                <a id="b6" class="content-menu-button" onclick="categoria(this,6)"><span class="fa fa-male icon_boton" aria-hidden="true"></span>PLANTILLAS</a>
             </div>
-            <div class="logo_equipo_menu_container" id="teamid_1087">
-                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/146.png" width="35"></div>
-                <div class="logo_equipo_menu_nombre">BOR</div>
-            </div>
-            <div class="logo_equipo_menu_container" id="teamid_1088">
-                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/145.png" width="35"></div>
-                <div class="logo_equipo_menu_nombre">COM</div>
-            </div>
-            <div class="logo_equipo_menu_container" id="teamid_1089">
-                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/256_1.png" width="35"></div>
-                <div class="logo_equipo_menu_nombre">ORO A</div>
-            </div>
-            <div class="logo_equipo_menu_container" id="teamid_1086">
-                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/149.png" width="35"></div>
-                <div class="logo_equipo_menu_nombre">LIC</div>
-            </div>
-            <div class="logo_equipo_menu_container" id="teamid_1087">
-                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/146.png" width="35"></div>
-                <div class="logo_equipo_menu_nombre">BOR</div>
-            </div>
-            <div class="logo_equipo_menu_container" id="teamid_1088">
-                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/145.png" width="35"></div>
-                <div class="logo_equipo_menu_nombre">COM</div>
-            </div>
-            <div class="logo_equipo_menu_container" id="teamid_1089">
-                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/256_1.png" width="35"></div>
-                <div class="logo_equipo_menu_nombre">ORO A</div>
+        <div class="menu_competicion_filters">
+            <div class="teams_logos_competicion_listado">   
+                <div class="logo_equipo_menu_container" id="teamid_1086">
+                    <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/149.png" width="35"></div>
+                    <div class="logo_equipo_menu_nombre">LIC</div>
+                </div>
+                <div class="logo_equipo_menu_container" id="teamid_1087">
+                    <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/146.png" width="35"></div>
+                    <div class="logo_equipo_menu_nombre">BOR</div>
+                </div>
+                <div class="logo_equipo_menu_container" id="teamid_1088">
+                    <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/145.png" width="35"></div>
+                    <div class="logo_equipo_menu_nombre">COM</div>
+                </div>
+                <div class="logo_equipo_menu_container" id="teamid_1089">
+                    <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/256_1.png" width="35"></div>
+                    <div class="logo_equipo_menu_nombre">ORO A</div>
+                </div>
+                <div class="logo_equipo_menu_container" id="teamid_1086">
+                    <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/149.png" width="35"></div>
+                    <div class="logo_equipo_menu_nombre">LIC</div>
+                </div>
+                <div class="logo_equipo_menu_container" id="teamid_1087">
+                    <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/146.png" width="35"></div>
+                    <div class="logo_equipo_menu_nombre">BOR</div>
+                </div>
+                <div class="logo_equipo_menu_container" id="teamid_1088">
+                    <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/145.png" width="35"></div>
+                    <div class="logo_equipo_menu_nombre">COM</div>
+                </div>
+                <div class="logo_equipo_menu_container" id="teamid_1089">
+                    <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/256_1.png" width="35"></div>
+                    <div class="logo_equipo_menu_nombre">ORO A</div>
+                </div>
             </div>
         </div>
+        <div style="text-align:center; margin: 10px 10px 10px 10px">
+            <div>
+                LIGA REGULAR IDA Y VUELTA. 8 PRIMEROS CLASIFICAN PARA CUARTOS DE FINAL - IDA Y VUELTA Y LOS CUATRO CLASIFICADOS JUGARAN LA F4. 8 PRIMEROS CLASIFICADOS PRIMERA VUELTA JUGARAN LA COPA FEDERACION.
+            </div>  
+        </div>        
     </div>
-    <div style="text-align:center; margin: 10px 10px 10px 10px">
-        <button class="information" onclick="mostrar3(this); return false;">Mostrar información<span class="fa fa-angle-double-down icon_boton" aria-hidden="true" style="margin-left: 5px"></span></button>
-        <div id="oculto3" style="display: none; text-align: left; margin: 10px;">
-            LIGA REGULAR IDA Y VUELTA. 8 PRIMEROS CLASIFICAN PARA CUARTOS DE FINAL - IDA Y VUELTA Y LOS CUATRO CLASIFICADOS JUGARAN LA F4. 8 PRIMEROS CLASIFICADOS PRIMERA VUELTA JUGARAN LA COPA FEDERACION.
-        </div>  
-    </div>        
-</div>
 
-<div id="content2" class="content-menu">
-    <div class="nombre-competicion">COPA FEDERACIÓN FEMENINA</div>
-    <div class="logo"><img src="big_logo.png" width="100%"></div>
-    <div class="content_buttons_container">
-            <a class="content-menu-button-selected" href="competicion-clasificacion.html"><span class="fa fa-bars icon_boton" aria-hidden="true"></span>CLASIFICACIÓN</a>
-            <a class="content-menu-button" href="#"><span class="fa fa-calendar icon_boton" aria-hidden="true"></span>GOLES</a>
-            <a class="content-menu-button" href="#"><span class="fa fa-bars icon_boton" aria-hidden="true"></span>CALENDARIO Y RESULTADOS</a>
-            <a class="content-menu-button" href="#"><span class="fa fa-area-chart icon_boton" aria-hidden="true"></span>DESIGNACIONES ARBITRALES</a>
-            <a class="content-menu-button" href="#"><span class="fa fa-file icon_boton" aria-hidden="true"></span>TARJETAS</a>
-            <a class="content-menu-button" href="#"><span class="fa fa-male icon_boton" aria-hidden="true"></span>PLANTILLAS</a>
-        </div>
-    <div class="menu_competicion_filters">
-        <div class="teams_logos_competicion_listado">   
-            <div class="logo_equipo_menu_container" id="teamid_1086">
-                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/149.png" width="35"></div>
-                <div class="logo_equipo_menu_nombre">LIC</div>
-            </div>
-            <div class="logo_equipo_menu_container" id="teamid_1087">
-                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/146.png" width="35"></div>
-                <div class="logo_equipo_menu_nombre">BOR</div>
-            </div>
-            <div class="logo_equipo_menu_container" id="teamid_1088">
-                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/145.png" width="35"></div>
-                <div class="logo_equipo_menu_nombre">COM</div>
-            </div>
-            <div class="logo_equipo_menu_container" id="teamid_1089">
-                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/256_1.png" width="35"></div>
-                <div class="logo_equipo_menu_nombre">ORO A</div>
-            </div>
-            <div class="logo_equipo_menu_container" id="teamid_1086">
-                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/149.png" width="35"></div>
-                <div class="logo_equipo_menu_nombre">LIC</div>
-            </div>
-            <div class="logo_equipo_menu_container" id="teamid_1087">
-                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/146.png" width="35"></div>
-                <div class="logo_equipo_menu_nombre">BOR</div>
-            </div>
-            <div class="logo_equipo_menu_container" id="teamid_1088">
-                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/145.png" width="35"></div>
-                <div class="logo_equipo_menu_nombre">COM</div>
-            </div>
-            <div class="logo_equipo_menu_container" id="teamid_1089">
-                <div class="logo_equipo_menu_logo"><img src="https://www.sidgad.com/fgpatinaxe/images/logos_clubes/256_1.png" width="35"></div>
-                <div class="logo_equipo_menu_nombre">ORO A</div>
-            </div>
-        </div>
+    <div id="c1" class="content-data">
+        <table class="rwd_auto fontsize" style="padding: 0px 10px 30px 10px">
+                <thead>
+                <tr>
+                    <th colspan="2"></th>
+                    <th>Ptos</th>
+                    <th>PJ</th>
+                    <th>PG</th>
+                    <th>PE</th>
+                    <th class="descarto">PP</th>
+                    <th class="descarto">GF</th>
+                    <th class="descarto">GC</th>
+                    <th class="descarto">Gav</th>
+                    <th class="descarto">Pen</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>H.C. BORBOLLA</td>
+                    <td class="special">30</td>
+                    <td>11</td>
+                    <td>10</td>
+                    <td>0</td>
+                    <td class="descarto">1</td>
+                    <td class="descarto">52</td>
+                    <td class="descarto">12</td>
+                    <td class="descarto">40</td>
+                    <td class="descarto"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>H.C. LICEO</td>
+                    <td class="special">24</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>0</td>
+                    <td class="descarto">2</td>
+                    <td class="descarto">39</td>
+                    <td class="descarto">16</td>
+                    <td class="descarto">23</td>
+                    <td class="descarto"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>C.P. OROSO A</td>
+                    <td class="special">20</td>
+                    <td>11</td>
+                    <td>6</td>
+                    <td>2</td>
+                    <td class="descarto">3</td>
+                    <td class="descarto">36</td>
+                    <td class="descarto">23</td>
+                    <td class="descarto">13</td>
+                    <td class="descarto"></td>
+                </tr>
+                    <tr>
+                    <td>4</td>
+                    <td>H.C. BORBOLLA</td>
+                    <td class="special">30</td>
+                    <td>11</td>
+                    <td>10</td>
+                    <td>0</td>
+                    <td class="descarto">1</td>
+                    <td class="descarto">52</td>
+                    <td class="descarto">12</td>
+                    <td class="descarto">40</td>
+                    <td class="descarto"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>H.C. LICEO</td>
+                    <td class="special">24</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>0</td>
+                    <td class="descarto">2</td>
+                    <td class="descarto">39</td>
+                    <td class="descarto">16</td>
+                    <td class="descarto">23</td>
+                    <td class="descarto"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>C.P. OROSO A</td>
+                    <td class="special">20</td>
+                    <td>11</td>
+                    <td>6</td>
+                    <td>2</td>
+                    <td class="descarto">3</td>
+                    <td class="descarto">36</td>
+                    <td class="descarto">23</td>
+                    <td class="descarto">13</td>
+                    <td class="descarto"></td>
+                </tr>
+                    <tr>
+                    <td>7</td>
+                    <td>H.C. BORBOLLA</td>
+                    <td class="special">30</td>
+                    <td>11</td>
+                    <td>10</td>
+                    <td>0</td>
+                    <td class="descarto">1</td>
+                    <td class="descarto">52</td>
+                    <td class="descarto">12</td>
+                    <td class="descarto">40</td>
+                    <td class="descarto"></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>H.C. LICEO</td>
+                    <td class="special">24</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>0</td>
+                    <td class="descarto">2</td>
+                    <td class="descarto">39</td>
+                    <td class="descarto">16</td>
+                    <td class="descarto">23</td>
+                    <td class="descarto"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>C.P. OROSO A</td>
+                    <td class="special">20</td>
+                    <td>11</td>
+                    <td>6</td>
+                    <td>2</td>
+                    <td class="descarto">3</td>
+                    <td class="descarto">36</td>
+                    <td class="descarto">23</td>
+                    <td class="descarto">13</td>
+                    <td class="descarto"></td>
+                </tr>
+                </tbody>
+        </table>
     </div>
-    <div style="text-align:center; margin: 10px 10px 10px 10px">
-        <div>
-            LIGA REGULAR IDA Y VUELTA. 8 PRIMEROS CLASIFICAN PARA CUARTOS DE FINAL - IDA Y VUELTA Y LOS CUATRO CLASIFICADOS JUGARAN LA F4. 8 PRIMEROS CLASIFICADOS PRIMERA VUELTA JUGARAN LA COPA FEDERACION.
-        </div>  
-    </div>        
-</div>
 
-<table class="rwd_auto fontsize" style="padding: 0px 10px 30px 10px">
-        <thead>
-        <tr>
-            <th colspan="2"></th>
-            <th>Ptos</th>
-            <th>PJ</th>
-            <th>PG</th>
-            <th>PE</th>
-            <th class="descarto">PP</th>
-            <th class="descarto">GF</th>
-            <th class="descarto">GC</th>
-            <th class="descarto">Gav</th>
-            <th class="descarto">Pen</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>1</td>
-            <td>H.C. BORBOLLA</td>
-            <td class="special">30</td>
-            <td>11</td>
-            <td>10</td>
-            <td>0</td>
-            <td class="descarto">1</td>
-            <td class="descarto">52</td>
-            <td class="descarto">12</td>
-            <td class="descarto">40</td>
-            <td class="descarto"></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>H.C. LICEO</td>
-            <td class="special">24</td>
-            <td>10</td>
-            <td>8</td>
-            <td>0</td>
-            <td class="descarto">2</td>
-            <td class="descarto">39</td>
-            <td class="descarto">16</td>
-            <td class="descarto">23</td>
-            <td class="descarto"></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>C.P. OROSO A</td>
-            <td class="special">20</td>
-            <td>11</td>
-            <td>6</td>
-            <td>2</td>
-            <td class="descarto">3</td>
-            <td class="descarto">36</td>
-            <td class="descarto">23</td>
-            <td class="descarto">13</td>
-            <td class="descarto"></td>
-        </tr>
-            <tr>
-            <td>4</td>
-            <td>H.C. BORBOLLA</td>
-            <td class="special">30</td>
-            <td>11</td>
-            <td>10</td>
-            <td>0</td>
-            <td class="descarto">1</td>
-            <td class="descarto">52</td>
-            <td class="descarto">12</td>
-            <td class="descarto">40</td>
-            <td class="descarto"></td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>H.C. LICEO</td>
-            <td class="special">24</td>
-            <td>10</td>
-            <td>8</td>
-            <td>0</td>
-            <td class="descarto">2</td>
-            <td class="descarto">39</td>
-            <td class="descarto">16</td>
-            <td class="descarto">23</td>
-            <td class="descarto"></td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>C.P. OROSO A</td>
-            <td class="special">20</td>
-            <td>11</td>
-            <td>6</td>
-            <td>2</td>
-            <td class="descarto">3</td>
-            <td class="descarto">36</td>
-            <td class="descarto">23</td>
-            <td class="descarto">13</td>
-            <td class="descarto"></td>
-        </tr>
-            <tr>
-            <td>7</td>
-            <td>H.C. BORBOLLA</td>
-            <td class="special">30</td>
-            <td>11</td>
-            <td>10</td>
-            <td>0</td>
-            <td class="descarto">1</td>
-            <td class="descarto">52</td>
-            <td class="descarto">12</td>
-            <td class="descarto">40</td>
-            <td class="descarto"></td>
-        </tr>
-        <tr>
-            <td>8</td>
-            <td>H.C. LICEO</td>
-            <td class="special">24</td>
-            <td>10</td>
-            <td>8</td>
-            <td>0</td>
-            <td class="descarto">2</td>
-            <td class="descarto">39</td>
-            <td class="descarto">16</td>
-            <td class="descarto">23</td>
-            <td class="descarto"></td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td>C.P. OROSO A</td>
-            <td class="special">20</td>
-            <td>11</td>
-            <td>6</td>
-            <td>2</td>
-            <td class="descarto">3</td>
-            <td class="descarto">36</td>
-            <td class="descarto">23</td>
-            <td class="descarto">13</td>
-            <td class="descarto"></td>
-        </tr>
-        </tbody>
-</table>
+    <div id="c2" style="display: none">
+        <p>CONTENIDO 2</p>
+    </div>
 
-<footer class="footer-distributed">
+    <div id="c3" style="display: none">
+        <p>CONTENIDO 3</p>
+    </div>
 
-      <div class="footer-right">
+    <div id="c4" style="display: none">
+        <p>CONTENIDO 4</p>
+    </div>
 
-        <a href="https://www.facebook.com/fgpatinaxe/"><i class="fa fa-facebook"></i></a>
-        <a href="https://twitter.com/FGPatinaxe#"><i class="fa fa-twitter"></i></a>
+    <div id="c5" style="display: none">
+        <p>CONTENIDO 5</p>
+    </div>
 
-      </div>
+    <div id="c6" style="display: none">
+        <p>CONTENIDO 6</p>
+    </div>
 
-      <div class="footer-left">
+    <footer class="footer-distributed">
 
-        <p class="footer-links">
-          <a href="#">Home</a>
-          ·
-          <a href="#">FAQ</a>
-          ·
-          <a href="#">Contacto</a>
-        </p>
+          <div class="footer-right">
 
-        <p>Company Name &copy; 2015</p>
-      </div>
+            <a href="https://www.facebook.com/fgpatinaxe/"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/FGPatinaxe#"><i class="fa fa-twitter"></i></a>
 
-    </footer>
+          </div>
 
-<script>
-function myFunction(enla) {
-    var x = document.getElementById("menu");
-    if (x.className === "topnav") {
-        x.className += " t0";
-    } else {
-        x.className = "topnav";
+          <div class="footer-left">
+
+            <p class="footer-links">
+              <a href="#">Home</a>
+              ·
+              <a href="#">FAQ</a>
+              ·
+              <a href="#">Contacto</a>
+            </p>
+
+            <p>Company Name &copy; 2015</p>
+          </div>
+
+        </footer>
+
+    <script>
+    function myFunction(enla) {
+        var x = document.getElementById("menu");
+        if (x.className === "topnav") {
+            x.className += " t0";
+        } else {
+            x.className = "topnav";
+        }
     }
-}
-</script>
+    </script>
 
-<script>
-function mostrar(enla) {
-  obj = document.getElementById('oculto');
-  obj.style.display = (obj.style.display == 'none') ? 'block' : 'none';
-}
-</script>
+    <script>
+    function mostrar(enla) {
+      obj = document.getElementById('oculto');
+      obj.style.display = (obj.style.display == 'none') ? 'block' : 'none';
+    }
+    </script>
 
-<script>
-function mostrar2(enla) {
-  obj = document.getElementById('oculto2');
-  obj.style.display = (obj.style.display == 'none') ? 'block' : 'none';
-}
-</script>
+    <script>
+    function mostrar2(enla) {
+      obj = document.getElementById('oculto2');
+      obj.style.display = (obj.style.display == 'none') ? 'block' : 'none';
+    }
+    </script>
 
-<script>
-function mostrar3(enla) {
-  obj = document.getElementById('oculto3');
-  obj.style.display = (obj.style.display == 'none') ? 'block' : 'none';
-}
-</script>
+    <script>
+    function mostrar3(enla) {
+      obj = document.getElementById('oculto3');
+      obj.style.display = (obj.style.display == 'none') ? 'block' : 'none';
+    }
+    </script>
 
 </body>
 </html>
