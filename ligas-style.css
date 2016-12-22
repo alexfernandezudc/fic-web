@@ -379,6 +379,8 @@ ul.topnav li.icon {
     font-weight: bold;
   }
 
+}
+
   .show-team {
     display: inline;
   }
@@ -386,9 +388,6 @@ ul.topnav li.icon {
   .dont-show {
     display: none;
   }
-
-}
-
 /*--------------------------------- FOOTER -------------------------------------*/
 
 .footer-distributed{
