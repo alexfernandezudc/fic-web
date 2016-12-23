@@ -79,27 +79,27 @@
       </div>
       <span class="details-league-summary-label">Resumen:</span>
       <table class="details-league-summary">
-        <tr>
+        <tr onclick="location.href='http://fic-web.esy.es/ficha.html'">
           <td>BOR B</td>
           <td>3:9</td>
           <td>TRAV</td>
         </tr>
-        <tr>
+        <tr onclick="location.href='http://fic-web.esy.es/ficha.html'">
           <td>CIA A</td>
           <td>7:0</td>
           <td>BOR A</td>
         </tr>
-        <tr>
+        <tr onclick="location.href='http://fic-web.esy.es/ficha.html'">
           <td>COM</td>
           <td>-</td>
           <td>RAX</td>
         </tr>
-        <tr>
+        <tr onclick="location.href='http://fic-web.esy.es/ficha.html'">
           <td>LUB</td>
           <td>-</td>
           <td>LIC</td>
         </tr>
-        <tr>
+        <tr onclick="location.href='http://fic-web.esy.es/ficha.html'">
           <td>DOM</td>
           <td>6:1</td>
           <td>CIA B</td>
@@ -147,6 +147,12 @@
           x.className = "topnav";
       }
   }
+
+jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.document.location = $(this).data("href");
+    });
+});
 
   /*
    Se ejecuta cuando el body cambia de tamaño, y se asegura de que en la versión

@@ -115,15 +115,16 @@ ul.topnav li.icon {
   }
 
   .league {
-      display: block;
-      width: 100%;
-      border-bottom: 1px solid #ccc;
-      overflow: auto;
-      transition: 0.3s;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    overflow: auto;
+    transition: 0.3s;
   }
   
   .league:hover {
       background: #b1aca4;
+      cursor: pointer;
   }
   
   .image-center {
@@ -202,6 +203,11 @@ ul.topnav li.icon {
     background-color: #d4d6d8;
   }
 
+  tr:hover{
+    color: #1970fc;
+    cursor: pointer;
+  }
+
   .details-league-button {
     display: inline-block;
     margin-top: 10px;
@@ -273,6 +279,7 @@ ul.topnav li.icon {
 
   .league:hover {
     background: #cccccc;
+    cursor: pointer;
   }
 
   .league-name {
@@ -356,6 +363,11 @@ ul.topnav li.icon {
 
   tr:nth-child(even) {
     background-color: #d4d6d8;
+  }
+
+  tr:hover{
+    color: #1970fc;
+    cursor: pointer;
   }
 
   .details-league-button {
