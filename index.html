@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<link rel="stylesheet" href="agenda-style.css">
+
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+
+
+<img src="header_fgp_hp.jpg" alt="Imagen cabecera" width="100%" height="100%">
+
+<ul class="topnav" id="menu">
+
+  <li><a class="selected" href="index.html" id="prueba">AGENDA FGPATINAXE</a></li>
+
+  <li><a class="pest" href="http://fic-web.esy.es/ligas.html">HOCKEY PATINES</a></li>
+
+  <li><a class="pest" href="#">HOCKEY LINEA</a></li>
+
+  <li class="icon"><a href="javascript:void(0);" style="font-size:16px;" onclick="myFunction()">☰</a></li>
+
+</ul>
+
+
+
+<select style="margin-top: 10px" class="descarto2" id="modality-filter" onchange="filterTableByModality()">
+
+  <option value="filtro-m">Filtro modalidad...</option>
+
+  <option value="hp">HOCKEY PATINES</option>
+
+  <option value="hl">HOCKEY LINEA</option>
+
+</select>
+
+
+
+<select style="margin-top: 10px" id="club-filter" onchange="filterTableByClub()">
+
+  <option value="filtro-c">Filtro club...</option>
+
+  <option value="e1" >H.C. LICEO</option>
+
+  <option value="e2" >H.C. BORBOLLA</option>
+
+  <option value="e3" >STA. MARIA DEL MAR</option>
+
+</select>
+
+
+
+<select style="margin-top: 10px">
+
+  <option value="7d">Próximos 7 días</option>
+
+  <option value="15d">Próximos 15 días</option>
+
+  <option value="21d">Próximos 21 días</option>
+
+</select>
+
+
+
+<table class="rwd_auto fontsize" id="table">
+
+        <thead>
+
+        <tr id="table-head">
+
+            <th class="descarto2"> Competición</th>
+
+            <th class="descarto2"> Mod.</th>
+            <th>Fecha</th>
+
+            <th>Hora</th>
+
+            <th>Local</th>
+
+            <th>Visitante</th>
+
+            <th class="descarto">Pista</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody>
+
+        <tr>
+
+            <td class="descarto2">HP COPA FEDERACION FEMENINA</td>
+
+            <td class="descarto2">HL</td>
+            <td>18/12/2016</td>
+
+            <td>13:30</td>
+
+            <td>H.C. LICEO</td>
+
+            <td>H.C. BORBOLLA</td>
+
+            <td class="descarto">COLEGIO LICEO</td>
+
+        </tr>
+
+        <tr>
+
+            <td class="descarto2">LIGA INFANTIL 1ª DIVISIÓN AUTONÓMICA</td>
+
+            <td class="descarto2">HP</td>
+            <td>18/12/2016</td>
+
+            <td>16:30</td>
+
+            <td>A.C. ORDENES</td>
+
+            <td>STA. MARIA DEL MAR</td>
+
+            <td class="descarto">PAB. CASTELAO 1 - ORDES</td>
+
+        </tr>
+
+        <tr>
+
+            <td class="descarto2">LIGA JUVENIL AUTONÓMICA</td>
+
+            <td class="descarto2">HP</td>
+            <td>18/12/2016</td>
+
+            <td>17:30</td>
+
+            <td>A.C. ORDENES</td>
+
+            <td>ESCOLA LUBIANS</td>
+
+            <td class="descarto">PAB. CASTELAO 1 - ORDES</td>
+
+        </tr>
+
+        <tr>
+
+            <td class="descarto2">HP COPA FEDERACION FEMENINA</td>
+
+            <td class="descarto2">HL</td>
+            <td>18/12/2016</td>
+
+            <td>13:30</td>
+
+            <td>H.C. LICEO</td>
+
+            <td>H.C. BORBOLLA</td>
+
+            <td class="descarto">COLEGIO LICEO</td>
+
+        </tr>
+
+        <tr>
+
+            <td class="descarto2">LIGA INFANTIL 1ª DIVISIÓN AUTONÓMICA</td>
+
+            <td class="descarto2">HL</td>
+            <td>18/12/2016</td>
+
+            <td>16:30</td>
+
+            <td>A.C. ORDENES</td>
+
+            <td>STA. MARIA DEL MAR</td>
+
+            <td class="descarto">PAB. CASTELAO 1 - ORDES</td>
+
+        </tr>
+
+        <tr>
+
+            <td class="descarto2">LIGA JUVENIL AUTONÓMICA</td>
+
+            <td class="descarto2">HP</td>
+            <td>18/12/2016</td>
+
+            <td>17:30</td>
+
+            <td>A.C. ORDENES</td>
+
+            <td>ESCOLA LUBIANS</td>
+
+            <td class="descarto">PAB. CASTELAO 1 - ORDES</td>
+
+        </tr>
+
+        <tr>
+
+            <td class="descarto2">HP COPA FEDERACION FEMENINA</td>
+
+            <td class="descarto2">HP</td>
+            <td>18/12/2016</td>
+
+            <td>13:30</td>
+
+            <td>H.C. LICEO</td>
+
+            <td>H.C. BORBOLLA</td>
+
+            <td class="descarto">COLEGIO LICEO</td>
+
+        </tr>
+
+        <tr>
+
+            <td class="descarto2">LIGA INFANTIL 1ª DIVISIÓN AUTONÓMICA</td>
+
+            <td class="descarto2">HL</td>
+            <td>18/12/2016</td>
+
+            <td>16:30</td>
+
+            <td>A.C. ORDENES</td>
+
+            <td>STA. MARIA DEL MAR</td>
+
+            <td class="descarto">PAB. CASTELAO 1 - ORDES</td>
+
+        </tr>
+
+        <tr>
+
+            <td class="descarto2">LIGA JUVENIL AUTONÓMICA</td>
+
+            <td class="descarto2">HP</td>
+            <td>18/12/2016</td>
+
+            <td>17:30</td>
+
+            <td>A.C. ORDENES</td>
+
+            <td>ESCOLA LUBIANS</td>
+
+            <td class="descarto">PAB. CASTELAO 1 - ORDES</td>
+
+        </tr>
+
+        <tr>
+
+            <td class="descarto2">HP COPA FEDERACION FEMENINA</td>
+
+            <td class="descarto2">HP</td>
+            <td>18/12/2016</td>
+
+            <td>13:30</td>
+
+            <td>H.C. LICEO</td>
+
+            <td>H.C. BORBOLLA</td>
+
+            <td class="descarto">COLEGIO LICEO</td>
+
+        </tr>
+
+        <tr>
+
+            <td class="descarto2">LIGA INFANTIL 1ª DIVISIÓN AUTONÓMICA</td>
+
+            <td class="descarto2">HL</td>
+            <td>18/12/2016</td>
+
+            <td>16:30</td>
+
+            <td>A.C. ORDENES</td>
+
+            <td>STA. MARIA DEL MAR</td>
+
+            <td class="descarto">PAB. CASTELAO 1 - ORDES</td>
+
+        </tr>
+
+        <tr>
+
+            <td class="descarto2">LIGA JUVENIL AUTONÓMICA</td>
+
+            <td class="descarto2">HP</td>
+            <td>18/12/2016</td>
+
+            <td>17:30</td>
+
+            <td>A.C. ORDENES</td>
+
+            <td>ESCOLA LUBIANS</td>
+
+            <td class="descarto">PAB. CASTELAO 1 - ORDES</td>
+
+        </tr>
+
+        </tbody>
+
+</table>
+
+
+
+<footer class="footer-distributed">
+
+
+
+      <div class="footer-right">
+
+
+
+        <a href="https://www.facebook.com/fgpatinaxe/"><i class="fa fa-facebook"></i></a>
+
+        <a href="https://twitter.com/FGPatinaxe#"><i class="fa fa-twitter"></i></a>
+
+
+
+      </div>
+
+
+
+      <div class="footer-left">
+
+
+
+        <p class="footer-links">
+
+          <a href="#">Home</a>
+
+          ·
+
+          <a href="#">FAQ</a>
+
+          ·
+
+          <a href="#">Contacto</a>
+
+        </p>
+
+
+
+        <p>Company Name &copy; 2015</p>
+
+      </div>
+
+
+
+    </footer>
+
+
+
+<script>
+
+function myFunction() {
+
+    var x = document.getElementById("menu");
+
+    if (x.className === "topnav") {
+
+        x.className += " t0";
+
+    } else {
+
+        x.className = "topnav";
+
+    }
+
+}
+
+function filterTableByClub(){
+	showCompleteTable();
+	// Variables
+	var table        = document.getElementById("table");
+	var tableRows    = table.getElementsByTagName("tr");
+	var tableCols    = document.getElementById("table-head").getElementsByTagName("th").length;
+	var selectionBox = document.getElementById("club-filter");
+	var filter       = selectionBox.options[selectionBox.selectedIndex].innerHTML;
+
+	if (filter == "Filtro club...")
+		return;
+	
+
+	for (i = 0; i < tableRows.length; i++) {
+    	tdLocal    = tableRows[i].getElementsByTagName("td")[4];
+    	tdVisitant = tableRows[i].getElementsByTagName("td")[5];
+    	if (tdLocal && tdVisitant) {
+    	  if (tdLocal.innerHTML.indexOf(filter) > -1 || tdVisitant.innerHTML.indexOf(filter) > -1) {
+    	    tableRows[i].style.display = "";
+    	  } else {
+    	    tableRows[i].style.display = "none";
+    	  }
+    	}       
+  	}
+}
+function filterTableByModality(){
+	showCompleteTable();
+	// Variables
+	var table        = document.getElementById("table");
+	var tableRows    = table.getElementsByTagName("tr");
+	var tableCols    = document.getElementById("table-head").getElementsByTagName("th").length;
+	var selectionBox = document.getElementById("modality-filter");
+	var selected = selectionBox.options[selectionBox.selectedIndex].innerHTML;
+	
+	switch(selected){
+	case 'HOCKEY PATINES':
+		filter = "HP";
+		break;
+	case 'HOCKEY LINEA':
+		filter = "HL";
+		break;
+	default:
+		return;
+	}
+
+	for (i = 0; i < tableRows.length; i++) {
+    	td = tableRows[i].getElementsByTagName("td")[1];
+
+    	if (td) {
+    	  if (td.innerHTML.indexOf(filter) > -1) {
+    	    tableRows[i].style.display = "";
+    	  } else {
+    	    tableRows[i].style.display = "none";
+    	  }
+    	}       
+ 	}
+}
+function showCompleteTable(){
+	var table = document.getElementById("table");
+	var tableRows    = table.getElementsByTagName("tr");
+
+	for (i=0;i<tableRows.length;i++)
+		tableRows[i].style.display="";
+}
+
+</script>
+
+
+
+</body>
+
+</html>
