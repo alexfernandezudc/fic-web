@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="ficha-style.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset=utf-8 />
+    <script>
+    function mostrar(enla) {
+        var x = document.getElementById("c1");
+     	var y = document.getElementById("c2");
+     	x.style.display = (x.style.display == 'none') ? 'block' : 'none';
+     	y.style.display = (y.style.display == 'none') ? 'block' : 'none';
+     	var x = document.getElementById("p1");
+     	var y = document.getElementById("p2");
+     	if (x.className === "pestaña") {
+            x.className += "-selected";
+        } else {
+            x.className = "pestaña";
+        }
+        if (y.className === "pestaña") {
+            y.className += "-selected";
+        } else {
+            y.className = "pestaña";
+        }
+    }
+    </script>
+    <script>
+    function menu(enla) {
+        var x = document.getElementById("menu");
+        if (x.className === "topnav") {
+            x.className += " t0";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    </script>
+</head>
+<body>
+    <ul class="topnav" id="menu">
+      <li><a class="pest" href="index.html">AGENDA FGPATINAXE</a></li>
+      <li><a class="selected" href="ligas.html">HOCKEY PATINES</a></li>
+      <li><a class="pest" href="#">HOCKEY LINEA</a></li>
+      <li class="icon"><a href="javascript:void(0);" style="font-size:16px;" onclick="menu()">☰</a></li>
+    </ul>
+	<div class="header">
+		<div class="titulo"></div>
+		<div class="menu">
+			<a href="#" onclick="mostrar(this)"><div id="p1" class="pestaña-selected">FICHA RESUMEN</div></a>
+			<a href="#" onclick="mostrar(this)"><div id="p2" class="pestaña">ACTA PARTIDO</div></a>
+		</div>
+	</div>
+	<div id="c1" class="content">
+		<div class="equipo">
+			<div class="titulo-content">Local</div>
+			<div class="contenido-equipo"></div>
+		</div>
+		<div class="equipo">
+			<div class="titulo-content">Visitante</div>
+			<div class="contenido-equipo"></div>
+		</div>
+		<div class="incidencias">
+			<div class="titulo-content">Incidencias</div>
+			<div class="contenido-incidencias"></div>
+		</div>
+	</div>
+	<div id="c2" class="content" style="display: none">
+		<div class="acta"></div>
+	</div>
+	<footer class="footer-distributed">
+        <div class="footer-right">
+            <a href="https://www.facebook.com/fgpatinaxe/"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/FGPatinaxe#"><i class="fa fa-twitter"></i></a>
+        </div>
+        <div class="footer-left">
+            <p class="footer-links">
+              <a href="#">Home</a>
+              ·
+              <a href="#">FAQ</a>
+              ·
+              <a href="#">Contacto</a>
+            </p>
+            <p>Company Name &copy; 2015</p>
+        </div>
+    </footer>
+</body>
+</html>
