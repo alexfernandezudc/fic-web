@@ -164,6 +164,12 @@ ul.topnav li.icon {
 	text-align: center;
 }	
 
+.resultado {
+	padding-top: 25px;
+	padding-right: 25px;
+	font-size: 25px;
+}
+
 .pestaña {
 	font-family: 'Open Sans Condensed', sans-serif;
     float: left;
@@ -233,10 +239,15 @@ ul.topnav li.icon {
 }
 
 .acta {
-
 	margin: 30px;
     height: 300px;
     overflow: auto;
     border: 1px solid #CCC;
     background-color: #f6f6f6
+}
+
+@media only screen and (max-width : 532px) {
+	.resultado {
+		padding-top: 10px;
+	} 
 }
