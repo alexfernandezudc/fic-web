@@ -97,7 +97,7 @@ ul.topnav li.icon {
   text-align: left;
   font: normal 16px sans-serif;
   padding: 5px 25px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .footer-distributed .footer-left p{
@@ -213,42 +213,135 @@ ul.topnav li.icon {
 
 /*--------------------------------- CONTENT ----------------------------------------*/
 
-.content {
-	min-height: 600px;
-	background-color: #ffffff;
-}
+@media only screen and (min-width: 532px){
+  .selector {
+    display: none;
+  }
 
-.incidencias, .equipo {
-	padding: 10px;
-}
-
-.titulo-content {
-	height: 35px;
-	background-color: gray;
-	font-size: 20px;
-	color: white;
-	text-align: center;
-	padding-top: 10px;
-}
-
-.contenido-incidencias, .contenido-equipo {
+  .content {
+  	min-height: 600px;
+  	background-color: #ffffff;
+    display: table;
+    overflow: auto;
+    width:100%;
+  }
+  
+  .equipos {
+    display: table-cell;
+    width: 75%;
+    position: relative;
+  }
+  
+   .equipo {
+      padding:10px;
+   }
+  
+  .incidencias {
+  	padding: 10px;
+    display: table-cell;
     width: 100%;
-    height: 20vh;
     overflow: auto;
-    border: 1px solid #CCC;
-    background-color: #f6f6f6
-}
-
-.acta {
-	margin: 30px;
-    height: 300px;
-    overflow: auto;
-    border: 1px solid #CCC;
-    background-color: #f6f6f6
+  }
+  
+  .titulo-content {
+  	height: 35px;
+    width: 100%;
+  	background-color: gray;
+  	font-size: 20px;
+  	color: white;
+  	text-align: center;
+  	padding-top: 10px;
+    margin: 0;
+    border: 1px solid gray;
+  }
+  
+  .contenido-incidencias {
+    width: 100%;
+    height: 550px;
+        border: 1px solid #CCC;
+      background-color: #f6f6f6
+  }
+  
+  .contenido-equipo {
+      width: 100%;
+      height: 241px;
+      overflow: auto;
+      border: 1px solid #CCC;
+      background-color: #f6f6f6
+  }
+  
+  .acta {
+  	margin: 30px;
+      height: 300px;
+      overflow: auto;
+      border: 1px solid #CCC;
+      background-color: #f6f6f6
+  }
 }
 
 @media only screen and (max-width : 532px) {
-	.resultado {
+	
+  .content {
+    min-height: 600px;
+    background-color: #ffffff;
+    display: block;
+    overflow: auto;
+    width:100%;
+  }
+  
+  .equipos {
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+  
+   .equipo {
+      padding:10px;
+   }
+  
+  .incidencias {
+    display: block;
+    position: relative;
+    padding: 10px;
+  }
+  
+  .titulo-content {
+    height: 35px;
+    width: 100%;
+    background-color: gray;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    margin: 0;
+    border: 1px solid gray;
+  }
+  
+  .contenido-incidencias {
+      width: 100%;
+      height: 241px;
+      overflow: auto;
+      border: 1px solid #CCC;
+      background-color: #f6f6f6
+  }
+  
+  .contenido-equipo {
+      width: 100%;
+      height: 241px;
+      overflow: auto;
+      border: 1px solid #CCC;
+      background-color: #f6f6f6
+  }
+  
+  .acta {
+    margin: 30px;
+      height: 300px;
+      overflow: auto;
+      border: 1px solid #CCC;
+      background-color: #f6f6f6
+  }
+
+  .resultado {
 		padding-top: 10px;
 	} 
 }

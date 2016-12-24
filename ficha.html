@@ -9,8 +9,8 @@
     function mostrar(enla) {
         var x = document.getElementById("c1");
      	var y = document.getElementById("c2");
-     	x.style.display = (x.style.display == 'none') ? 'block' : 'none';
-     	y.style.display = (y.style.display == 'none') ? 'block' : 'none';
+     	x.style.display = (x.style.display == 'none') ? 'table' : 'none';
+     	y.style.display = (y.style.display == 'none') ? 'table' : 'none';
      	var x = document.getElementById("p1");
      	var y = document.getElementById("p2");
      	if (x.className === "pestaña") {
@@ -53,17 +53,21 @@
 		</div>
 	</div>
 	<div id="c1" class="content">
-		<div class="equipo">
-			<div class="titulo-content">Local</div>
-			<div class="contenido-equipo">TABLA</div>
-		</div>
-		<div class="equipo">
-			<div class="titulo-content">Visitante</div>
-			<div class="contenido-equipo">TABLA</div>
-		</div>
+    <div class="equipos">
+		  <div class="equipo">
+			   <div class="titulo-content">Local</div>
+			   <div class="contenido-equipo">TABLA</div>
+		  </div>
+		  <div class="equipo">
+			   <div class="titulo-content">Visitante</div>
+			   <div class="contenido-equipo">TABLA</div>
+		  </div>
+    </div>
 		<div class="incidencias">
-			<div class="titulo-content">Incidencias</div>
-			<div class="contenido-incidencias">TEXTO</div>
+        <p class="titulo-content">Incidencias</p>
+        <div class="contenido-incidencias">
+
+        </div>
 		</div>
 	</div>
 	<div id="c2" class="content" style="display: none">
